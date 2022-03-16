@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
+*{
+ margin:0;
+ padding:0;
+}
+
+body{
+ font-family:'Roboto',sans-serif;
+  overflow-x:hidden;
+  background: black;
+}
+nav{
+display:flex;
+background: linear-gradient(135deg, #00dd42, #f321d7); 
+justify-content: space-around;
+padding:20px 0;
+color:rgb(255, 254, 254);
+align-items: center;
+}
+nav ul{
+display:flex;
+list-style: none;
+width:40%;
+justify-content: space-between;
+}
+nav ul li{
+  border: 2px solid rgb(253, 247, 247);
+  padding: 5px;
+  border-radius: 18.2px;
+}
+nav ul li:hover {
+  color: #ffec61;
+border-color:   #ffec61;
+}
+nav ul li a {
+  color:#fff;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+
+.btn{
+border-radius: 40px;
+}
+/*Hamburger */
+.menu-bars{
+display:none;
+flex-direction: column;
+height:20px;
+justify-content: space-between;
+position:relative;
+  z-index:999;
+}
+.menu-bars input{
+position: absolute;
+width:40px;
+height:28px;
+left:-5px;
+top:-3px;
+opacity: 0;
+cursor:pointer;
+z-index: 2;
+}
+
+.menu-bars span{
+display:block;
+width:28px;
+height:3px;
+background-color:rgb(255, 254, 254);
+border-radius: 3px;
+transition: all 0.3s;
+}
+
+.menu-bars span:nth-child(2){
+transform-origin: 0 0 ;
+}
+
+.menu-bars span:nth-child(4){
+  transform-origin: 0 100% ;
+  }
+
+.menu-bars input:checked ~ span:nth-child(2){
+background-color: white;
+transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-bars input:checked ~ span:nth-child(4){
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px,0); 
+  }
+
+  .menu-bars input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: scale(0); 
+    }
+
+#submit-destination {
+  color: white;
+}
+
+
+@media only screen and (max-width: 768px){
+nav ul{
+width:50%;
+}
+
+}
+@media only screen and (max-width: 576px){
+  nav ul li{
+    color: #ffec61;
+  border:none;
+  }
+  .menu-bars{
+  display:flex;
+  }
+  nav ul{
+  position:absolute;
+  right:0;
+  top:0;
+  width:100%;
+  height:100vh;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg,  #f321d7,#ffec61, rgb(243, 9, 9));
+  z-index: 1;
+  transform: translateY(-100%);
+  transition: all 1s;
+  }
+  }
+  nav ul.slide{
+    transform: translateY(0);
+  }
+
+  #arrow{
+    height: 250px;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -125px;
+    position: absolute;
+    top: 50%;
+    width: 250px;
+  }
+
+  #angle-text {
+    color: white;
+    height: 250px;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -100px;
+    position: absolute;
+    top: 80%;
+    width: 250px;
+  }

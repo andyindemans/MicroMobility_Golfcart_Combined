@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Micromobility</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<script type="text/javascript" type="text/javascript">
+  //ROS web bridge code
+    // Connecting to ROS
+    var ros = new ROSLIB.Ros({
+      url : 'ws://localhost:9090'
+    });
+  
+    
+    
+    ros.on('connection', function() {
+      var listener = new ROSLIB.Topic({
+      ros : ros,
+      name : '/demo_angle',
+      messageType : 'std_msgs/Int64'
+    });
+     
+    listener.subscribe(function(message) {
+        rotateImage(message.data)
+       });
+          
+    });
+</script>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+    <h2>Micromobility: Autonomous driving</h2>
+  </div>
+<ul>
+<li><a href="index.html">Path</a></li>
+<li><a href="heading.html">Heading</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<div class="menu-bars" id="toggle">
+<input type="checkbox">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>  
+<img src="arrow.png" id="arrow" alt="">
+<h1 id="angle-text">Angle: </h1>
+</body>
+<script>
+  function rotateImage(angle) {
+      var img = document.getElementById('arrow');
+      img.style.transform = `rotate(${angle}deg)`;
+      var angleText = document.getElementById('angle-text');
+      angleText.innerHTML = `Angle: ${angle}°`;
+  }
+
+
+
+
+</script>
+</html>

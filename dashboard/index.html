@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="http://static.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
+<script type="text/javascript" src="http://static.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+<script>
+  mapboxgl.accessToken = "pk.eyJ1IjoiZXJuZXN0dmVyZXlja2VuIiwiYSI6ImNrcGUzbGtjaTFzanIycm9nbGJxemM0cTMifQ.oXApkFUoFIPSB7THmVmDCw";
+</script>
+<script src="mapkick.js"></script>
+
+<script type="text/javascript" type="text/javascript">
+//ROS web bridge code
+  // Connecting to ROS
+
+
+  var ros = new ROSLIB.Ros({
+    url : 'ws://localhost:9090'
+  });
+
+  var listener = new ROSLIB.Topic({
+    ros : ros,
+    name : '/path',
+    messageType : 'std_msgs/Int64MultiArray'
+  });
+   
+  listener.subscribe(function(message) {
+      displayPath(message.data)
+     });
+  
+
+     
+  ros.on('connection', function() {
+    console.log('Connected to websocket server.');
+    // publish to topic
+    var dashboard_test_topic = new ROSLIB.Topic({
+        ros : ros,
+        name : '/topic',
+        messageType : 'std_msgs/String'
+    });
+
+    var message = new ROSLIB.Message({
+        data: "test_data_msg"
+    })
+
+    dashboard_test_topic.publish(message)
+    console.log("published to topic")
+        
+  });
+
+  function publishDestination(destinationId){
+    var destinationTopic = new ROSLIB.Topic({
+        ros : ros,
+        name : '/destination_id',
+        messageType : 'std_msgs/Int64'
+    });
+
+    var message = new ROSLIB.Message({
+        data: parseInt(destinationId)
+    })
+
+    destinationTopic.publish(message)
+    console.log(message)
+  }
+
+  ros.on('error', function(error) {
+    console.log('Error connecting to websocket server: ', error);
+  });
+
+  ros.on('close', function() {
+    console.log('Connection to websocket server closed.');
+  });
+
+  
+
+  
+</script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+        <h2>Micromobility: Autonomous driving</h2>
+      </div>
+  
+  <ul>
+  <li><a href="#">Path</a></li>
+  <li><a href="heading.html">Heading</a></li>
+  <li><a href="#">Avoidance</a></li>
+  </ul>
+  <div class="menu-bars" id="toggle">
+    <input type="checkbox">
+  <span></span>
+  <span></span>
+  <span></span>
+  </div>
+  </nav>  
+  <div id="map" style="height: 800px;"></div>
+
+
+<script>
+    var mapJson;
+    var path;
+
+    function fetchMap(){
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+      if ((this.readyState == 4) && this.status == 200) 
+      { 
+      	mapJson = JSON.parse(this.responseText);
+      	
+        //window.localStorage.setItem("map", JSON.stringify(this.responseText));
+        //console.log(window.localStorage.getItem("map"))
+        
+        mapJson[1106]["icon"] = "car"
+        for (var i = 0; i < Object.keys(mapJson).length; i++){
+          mapJson[i]["tooltip"] = i;
+        }
+        new Mapkick.Map("map", mapJson, {zoom: 16.2, defaultIcon:"circle"});
+        
+        path = JSON.parse(window.localStorage.getItem("path") || "[]")
+        
+        for (var i = 0; i < Object.keys(mapJson).length; i++){
+          if (!path.includes(i)){
+            mapJson[i]["icon"] = "circle"
+          }
+        }
+        new Mapkick.Map("map", mapJson, {zoom: 16.2});
+        
+      }
+    };
+      xhttp.open("GET", "http://localhost:3000/map", true);
+      xhttp.send();
+    }
+
+    function displayPath(pathIds){
+    	
+      for (var i = 0; i<pathIds.length; i++){
+        if (i != pathIds.length - 1){
+          if (Math.abs(pathIds[i] - pathIds[i+1]) > 1 && Math.abs(pathIds[i] - pathIds[i+1]) < 10){
+            for(var x = pathIds[i]; x < pathIds[i+1]; x++){
+              pathIds.push(x)
+            }
+            for(var x = pathIds[i+1];  x < pathIds[i]; x++){
+              pathIds.push(x)
+            }
+          }
+      }
+    }
+    window.localStorage.setItem("path", JSON.stringify(pathIds));
+	fetchMap();
+    }
+path = JSON.parse(window.localStorage.getItem("path") || "[]")
+
+    //main
+    
+    fetchMap();
+    
+    if (this.path == null) {
+    	console.log("No path found!")
+     }
+    else {
+    	console.log("Path found!")		 
+    }
+
+    
+    
+
+  //new Mapkick.Map("map", [{latitude: 50.95289169 , longitude: 5.35213989833333}]);
+  
+  function submitDestination(){
+    localStorage.removeItem('path')
+    var destinationId = document.getElementById("destination-id").value
+    publishDestination(destinationId)
+  }
+  
+</script>
+<div id="submit-destination">
+  <div>
+    <p style="text-align: center; margin-top: 10px; font-family:'Courier New', Courier, monospace; font-size: large;">Destination ID: </p>
+  </div>
+  <div style="text-align: center; margin-top: 10px;">
+    <input type="text" id="destination-id">
+    <input type="submit" value="submit" onclick="return submitDestination()" style="font-size: large;" />
+  </div>
+  
+</div>
+</body>
+</html>

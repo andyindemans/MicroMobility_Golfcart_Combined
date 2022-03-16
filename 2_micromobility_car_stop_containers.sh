@@ -1,0 +1,1 @@
+docker container stop micromobility_car_navigation_container micromobility_car_object_avoidance_container micromobility_car_pilot_container micromobility_car_dashboard_container
