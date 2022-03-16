@@ -1,0 +1,2 @@
+bool sensor_error
+float64 data

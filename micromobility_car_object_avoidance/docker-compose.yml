@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  object_detection:
+    image: micromobility_car_object_avoidance:latest
+    container_name: micromobility_car_object_avoidance_container
+    stdin_open: true
+    tty: true
+    network_mode: "host"
+    volumes: 
+    - ../micromobility_car_object_avoidance/local/Project:/home/user/Projects
+    - $HOME/.Xauthority:/root/.Xauthority
+    environment:
+        DISPLAY: $DISPLAY
+    privileged: true

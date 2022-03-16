@@ -1,0 +1,359 @@
+[0.000000] (-) TimerEvent: {}
+[0.000788] (mm_interfaces) JobQueued: {'identifier': 'mm_interfaces', 'dependencies': OrderedDict()}
+[0.000834] (navigation) JobQueued: {'identifier': 'navigation', 'dependencies': OrderedDict()}
+[0.000866] (pathfinding) JobQueued: {'identifier': 'pathfinding', 'dependencies': OrderedDict([('mm_interfaces', '/home/user/Projects/dev_ws/install/mm_interfaces')])}
+[0.000899] (mm_interfaces) JobStarted: {'identifier': 'mm_interfaces'}
+[0.013035] (navigation) JobStarted: {'identifier': 'navigation'}
+[0.025098] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'cmake'}
+[0.025911] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'build'}
+[0.027121] (mm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/Projects/dev_ws/build/mm_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/user/Projects/dev_ws/build/mm_interfaces', 'env': OrderedDict([('HOSTNAME', 'asus-TUF'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/user/Projects'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('_colcon_cd_root', '/home/user/Projects/dev_ws'), ('COLCON_PREFIX_PATH', '/home/user/Projects/dev_ws/install:/home/user/Projects/dev_ws/src/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'graphics'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', ':di=1;33:ln=36'), ('AMENT_PREFIX_PATH', '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/home/user/Projects/dev_ws/src/install/mm_interfaces:/opt/ros/foxy'), ('PWD', '/home/user/Projects/dev_ws/build/mm_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/mm_interfaces:/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/opt/ros/foxy')]), 'shell': False}
+[0.098621] (mm_interfaces) StdoutLine: {'line': b'[  1%] Built target mm_interfaces__cpp\n'}
+[0.099751] (-) TimerEvent: {}
+[0.104401] (mm_interfaces) StdoutLine: {'line': b'[ 12%] Built target mm_interfaces__rosidl_generator_c\n'}
+[0.141997] (mm_interfaces) StdoutLine: {'line': b'[ 24%] Built target mm_interfaces__rosidl_typesupport_cpp\n'}
+[0.142711] (mm_interfaces) StdoutLine: {'line': b'[ 35%] Built target mm_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.145995] (mm_interfaces) StdoutLine: {'line': b'[ 47%] Built target mm_interfaces__rosidl_typesupport_c\n'}
+[0.148100] (mm_interfaces) StdoutLine: {'line': b'[ 64%] Built target mm_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.148321] (mm_interfaces) StdoutLine: {'line': b'[ 70%] Built target mm_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.184769] (mm_interfaces) StdoutLine: {'line': b'[ 82%] Built target mm_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.199879] (-) TimerEvent: {}
+[0.209700] (mm_interfaces) StdoutLine: {'line': b'[ 82%] Built target mm_interfaces\n'}
+[0.234863] (mm_interfaces) StdoutLine: {'line': b'[ 83%] Built target mm_interfaces__py\n'}
+[0.271806] (mm_interfaces) StdoutLine: {'line': b'[ 93%] Built target mm_interfaces__python\n'}
+[0.299979] (-) TimerEvent: {}
+[0.309220] (mm_interfaces) StdoutLine: {'line': b'[100%] Built target mm_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.309500] (mm_interfaces) StdoutLine: {'line': b'[100%] Built target mm_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.309666] (mm_interfaces) StdoutLine: {'line': b'[100%] Built target mm_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.327682] (mm_interfaces) CommandEnded: {'returncode': 0}
+[0.332402] (navigation) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/navigation', 'build', '--build-base', '/home/user/Projects/dev_ws/build/navigation/build', 'install', '--prefix', '/home/user/Projects/dev_ws/install/navigation', '--record', '/home/user/Projects/dev_ws/build/navigation/install.log', '--single-version-externally-managed'], 'cwd': '/home/user/Projects/dev_ws/src/navigation', 'env': {'HOSTNAME': 'asus-TUF', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/user', 'OLDPWD': '/home/user/Projects', 'PYTHONUNBUFFERED': '1', 'ROS_PYTHON_VERSION': '3', '_colcon_cd_root': '/home/user/Projects/dev_ws', 'COLCON_PREFIX_PATH': '/home/user/Projects/dev_ws/install:/home/user/Projects/dev_ws/src/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'graphics', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': ':di=1;33:ln=36', 'AMENT_PREFIX_PATH': '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/home/user/Projects/dev_ws/src/install/mm_interfaces:/opt/ros/foxy', 'PWD': '/home/user/Projects/dev_ws/build/navigation', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/mm_interfaces'}, 'shell': False}
+[0.400076] (-) TimerEvent: {}
+[0.500424] (-) TimerEvent: {}
+[0.502996] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'install'}
+[0.515480] (mm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/user/Projects/dev_ws/build/mm_interfaces'], 'cwd': '/home/user/Projects/dev_ws/build/mm_interfaces', 'env': OrderedDict([('HOSTNAME', 'asus-TUF'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/user/Projects'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('_colcon_cd_root', '/home/user/Projects/dev_ws'), ('COLCON_PREFIX_PATH', '/home/user/Projects/dev_ws/install:/home/user/Projects/dev_ws/src/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'graphics'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', ':di=1;33:ln=36'), ('AMENT_PREFIX_PATH', '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/home/user/Projects/dev_ws/src/install/mm_interfaces:/opt/ros/foxy'), ('PWD', '/home/user/Projects/dev_ws/build/mm_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/mm_interfaces:/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/opt/ros/foxy')]), 'shell': False}
+[0.525731] (mm_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.526066] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/ament_index/resource_index/rosidl_interfaces/mm_interfaces\n'}
+[0.526394] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces\n'}
+[0.526699] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg\n'}
+[0.527047] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail\n'}
+[0.527474] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__functions.c\n'}
+[0.527834] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__functions.c\n'}
+[0.528109] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__type_support.h\n'}
+[0.528251] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__functions.h\n'}
+[0.528390] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__type_support.h\n'}
+[0.528570] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__struct.h\n'}
+[0.528706] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__struct.h\n'}
+[0.528969] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__functions.h\n'}
+[0.529307] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__type_support.h\n'}
+[0.529518] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__struct.h\n'}
+[0.529652] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__type_support.h\n'}
+[0.529826] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__functions.c\n'}
+[0.529952] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__functions.h\n'}
+[0.530073] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__functions.c\n'}
+[0.530194] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__type_support.h\n'}
+[0.530313] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__type_support.h\n'}
+[0.530434] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__functions.c\n'}
+[0.530558] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__functions.h\n'}
+[0.530767] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__struct.h\n'}
+[0.531059] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__struct.h\n'}
+[0.531354] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__functions.c\n'}
+[0.531543] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__functions.h\n'}
+[0.531672] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__struct.h\n'}
+[0.531837] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__functions.h\n'}
+[0.532014] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/float.h\n'}
+[0.532146] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/camera_image.h\n'}
+[0.532381] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/current_next_location.h\n'}
+[0.532716] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/coordinate_msg.h\n'}
+[0.533102] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/mm_sensor_msg.h\n'}
+[0.533320] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/int.h\n'}
+[0.533461] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.533646] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv\n'}
+[0.533786] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail\n'}
+[0.533933] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__functions.h\n'}
+[0.534061] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__functions.c\n'}
+[0.534225] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__type_support.h\n'}
+[0.534349] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__functions.h\n'}
+[0.534529] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__functions.h\n'}
+[0.534832] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__functions.c\n'}
+[0.535185] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__struct.h\n'}
+[0.535467] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__functions.c\n'}
+[0.535816] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__struct.h\n'}
+[0.536153] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__type_support.h\n'}
+[0.536534] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__struct.h\n'}
+[0.536814] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__type_support.h\n'}
+[0.536974] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/proximity.h\n'}
+[0.537105] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/heading_calculator.h\n'}
+[0.537296] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/pathfinding.h\n'}
+[0.537545] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/library_path.sh\n'}
+[0.537858] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/library_path.dsv\n'}
+[0.538042] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_generator_c.so\n'}
+[0.538170] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces\n'}
+[0.538335] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg\n'}
+[0.538469] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail\n'}
+[0.538594] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[0.538721] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__rosidl_typesupport_fastrtps_c.h\n'}
+[0.538847] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__rosidl_typesupport_fastrtps_c.h\n'}
+[0.539024] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[0.539159] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__rosidl_typesupport_fastrtps_c.h\n'}
+[0.539343] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__rosidl_typesupport_fastrtps_c.h\n'}
+[0.539547] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.539675] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv\n'}
+[0.539801] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail\n'}
+[0.539947] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__rosidl_typesupport_fastrtps_c.h\n'}
+[0.540074] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__rosidl_typesupport_fastrtps_c.h\n'}
+[0.540201] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__rosidl_typesupport_fastrtps_c.h\n'}
+[0.540327] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.540453] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces\n'}
+[0.540579] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg\n'}
+[0.540705] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail\n'}
+[0.540830] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.540956] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.541081] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/dds_fastrtps\n'}
+[0.541208] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.541334] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.541465] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.541591] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.541715] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.541839] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv\n'}
+[0.541975] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail\n'}
+[0.542100] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.542221] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/dds_fastrtps\n'}
+[0.542342] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.542461] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.542580] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.542700] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces\n'}
+[0.542821] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg\n'}
+[0.542957] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail\n'}
+[0.543082] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__type_support.c\n'}
+[0.543207] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__type_support.c\n'}
+[0.543332] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__type_support.c\n'}
+[0.543456] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__type_support.c\n'}
+[0.543591] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__rosidl_typesupport_introspection_c.h\n'}
+[0.543715] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__type_support.c\n'}
+[0.543839] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__rosidl_typesupport_introspection_c.h\n'}
+[0.543991] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__rosidl_typesupport_introspection_c.h\n'}
+[0.544111] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__rosidl_typesupport_introspection_c.h\n'}
+[0.544230] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__type_support.c\n'}
+[0.544348] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__rosidl_typesupport_introspection_c.h\n'}
+[0.544467] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__rosidl_typesupport_introspection_c.h\n'}
+[0.544585] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.544704] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv\n'}
+[0.544823] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail\n'}
+[0.544968] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__rosidl_typesupport_introspection_c.h\n'}
+[0.545102] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__type_support.c\n'}
+[0.545240] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__type_support.c\n'}
+[0.545376] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__rosidl_typesupport_introspection_c.h\n'}
+[0.545510] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__rosidl_typesupport_introspection_c.h\n'}
+[0.545645] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__type_support.c\n'}
+[0.545779] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.545924] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_typesupport_c.so\n'}
+[0.546048] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces\n'}
+[0.546171] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg\n'}
+[0.546294] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail\n'}
+[0.546418] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__builder.hpp\n'}
+[0.546541] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__struct.hpp\n'}
+[0.546665] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__builder.hpp\n'}
+[0.546789] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__traits.hpp\n'}
+[0.546925] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__traits.hpp\n'}
+[0.547043] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__traits.hpp\n'}
+[0.547162] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__struct.hpp\n'}
+[0.547281] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__builder.hpp\n'}
+[0.547399] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__struct.hpp\n'}
+[0.547518] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__builder.hpp\n'}
+[0.547636] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__builder.hpp\n'}
+[0.547763] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__traits.hpp\n'}
+[0.547899] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__struct.hpp\n'}
+[0.548027] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__struct.hpp\n'}
+[0.548146] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__traits.hpp\n'}
+[0.548265] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__builder.hpp\n'}
+[0.548383] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__traits.hpp\n'}
+[0.548502] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__struct.hpp\n'}
+[0.548621] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/current_next_location.hpp\n'}
+[0.548741] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/mm_sensor_msg.hpp\n'}
+[0.548859] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/float.hpp\n'}
+[0.548995] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/coordinate_msg.hpp\n'}
+[0.549119] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/int.hpp\n'}
+[0.549243] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/camera_image.hpp\n'}
+[0.549371] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv\n'}
+[0.549496] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail\n'}
+[0.549620] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__struct.hpp\n'}
+[0.549743] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__traits.hpp\n'}
+[0.549882] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__struct.hpp\n'}
+[0.550001] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__traits.hpp\n'}
+[0.550120] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__builder.hpp\n'}
+[0.550239] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__struct.hpp\n'}
+[0.550358] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__builder.hpp\n'}
+[0.550477] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__builder.hpp\n'}
+[0.550596] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__traits.hpp\n'}
+[0.550715] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/proximity.hpp\n'}
+[0.550834] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/pathfinding.hpp\n'}
+[0.550987] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/heading_calculator.hpp\n'}
+[0.551112] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces\n'}
+[0.551235] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg\n'}
+[0.551359] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail\n'}
+[0.551483] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.551608] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.551733] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.551868] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.552018] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/coordinate_msg__type_support.cpp\n'}
+[0.552159] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.552288] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__type_support.cpp\n'}
+[0.552417] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/float__type_support.cpp\n'}
+[0.552547] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/mm_sensor_msg__type_support.cpp\n'}
+[0.552675] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/camera_image__type_support.cpp\n'}
+[0.552805] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/int__type_support.cpp\n'}
+[0.552933] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/msg/detail/current_next_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.553062] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv\n'}
+[0.553190] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail\n'}
+[0.553324] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.553454] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/pathfinding__type_support.cpp\n'}
+[0.553582] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.553711] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__type_support.cpp\n'}
+[0.553846] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/proximity__type_support.cpp\n'}
+[0.553985] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/include/mm_interfaces/srv/detail/heading_calculator__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.554108] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.554231] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.554354] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/pythonpath.sh\n'}
+[0.554477] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/pythonpath.dsv\n'}
+[0.554600] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/__init__.py\n'}
+[0.588393] (navigation) StdoutLine: {'line': b'running egg_info\n'}
+[0.588698] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg\n'}
+[0.588947] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_current_next_location_s.c\n'}
+[0.589254] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/__init__.py\n'}
+[0.589580] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_camera_image_s.c\n'}
+[0.589746] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_current_next_location.py\n'}
+[0.589907] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_camera_image.py\n'}
+[0.590049] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_coordinate_msg_s.c\n'}
+[0.590217] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_coordinate_msg.py\n'}
+[0.590347] (navigation) StdoutLine: {'line': b'writing ../../build/navigation/navigation.egg-info/PKG-INFO\n'}
+[0.590478] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_float_s.c\n'}
+[0.590608] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_float.py\n'}
+[0.590736] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_mm_sensor_msg.py\n'}
+[0.590877] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_int_s.c\n'}
+[0.591078] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_mm_sensor_msg_s.c\n'}
+[0.591206] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/msg/_int.py\n'}
+[0.591331] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv\n'}
+[0.591461] (navigation) StdoutLine: {'line': b'writing dependency_links to ../../build/navigation/navigation.egg-info/dependency_links.txt\n'}
+[0.591586] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/__init__.py\n'}
+[0.591710] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/_heading_calculator_s.c\n'}
+[0.591833] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/_proximity.py\n'}
+[0.591990] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/_pathfinding_s.c\n'}
+[0.592110] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/_pathfinding.py\n'}
+[0.592234] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/_heading_calculator.py\n'}
+[0.592354] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/srv/_proximity_s.c\n'}
+[0.592473] (navigation) StdoutLine: {'line': b'writing entry points to ../../build/navigation/navigation.egg-info/entry_points.txt\n'}
+[0.592602] (navigation) StdoutLine: {'line': b'writing requirements to ../../build/navigation/navigation.egg-info/requires.txt\n'}
+[0.592764] (navigation) StdoutLine: {'line': b'writing top-level names to ../../build/navigation/navigation.egg-info/top_level.txt\n'}
+[0.592899] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/mm_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.593023] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/mm_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.593148] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages/mm_interfaces/mm_interfaces_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.593306] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/lib/libmm_interfaces__python.so\n'}
+[0.593656] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/MmSensorMsg.idl\n'}
+[0.593806] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/Float.idl\n'}
+[0.594007] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/Int.idl\n'}
+[0.594135] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/CameraImage.idl\n'}
+[0.594349] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/CoordinateMsg.idl\n'}
+[0.594499] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/CurrentNextLocation.idl\n'}
+[0.594669] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Pathfinding.idl\n'}
+[0.594839] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/HeadingCalculator.idl\n'}
+[0.595030] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Proximity.idl\n'}
+[0.595203] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/MmSensorMsg.msg\n'}
+[0.595381] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/Float.msg\n'}
+[0.595533] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/Int.msg\n'}
+[0.595724] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/CameraImage.msg\n'}
+[0.595922] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/CoordinateMsg.msg\n'}
+[0.596080] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/msg/CurrentNextLocation.msg\n'}
+[0.596257] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Pathfinding.srv\n'}
+[0.596433] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Pathfinding_Request.msg\n'}
+[0.596610] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Pathfinding_Response.msg\n'}
+[0.596784] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/HeadingCalculator.srv\n'}
+[0.596938] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/HeadingCalculator_Request.msg\n'}
+[0.597067] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/HeadingCalculator_Response.msg\n'}
+[0.597230] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Proximity.srv\n'}
+[0.597382] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Proximity_Request.msg\n'}
+[0.597551] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/srv/Proximity_Response.msg\n'}
+[0.597681] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/ament_index/resource_index/package_run_dependencies/mm_interfaces\n'}
+[0.597849] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/ament_index/resource_index/parent_prefix_path/mm_interfaces\n'}
+[0.598045] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/ament_prefix_path.sh\n'}
+[0.598207] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.598362] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/path.sh\n'}
+[0.598516] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/environment/path.dsv\n'}
+[0.598646] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/local_setup.bash\n'}
+[0.598774] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/local_setup.sh\n'}
+[0.598920] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/local_setup.zsh\n'}
+[0.599042] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/local_setup.dsv\n'}
+[0.599171] (mm_interfaces) StdoutLine: {'line': b'-- Installing: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/package.dsv\n'}
+[0.599315] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/ament_index/resource_index/packages/mm_interfaces\n'}
+[0.599478] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.599602] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.599816] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.599995] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.600192] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.600363] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.600521] (-) TimerEvent: {}
+[0.600726] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.600860] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.601016] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.601151] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.601284] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.601418] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.601551] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.601685] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.601818] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.601963] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.602101] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.602244] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.602373] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfacesConfig.cmake\n'}
+[0.602650] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/cmake/mm_interfacesConfig-version.cmake\n'}
+[0.602976] (mm_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/user/Projects/dev_ws/install/mm_interfaces/share/mm_interfaces/package.xml\n'}
+[0.603742] (mm_interfaces) CommandEnded: {'returncode': 0}
+[0.648507] (navigation) StdoutLine: {'line': b"reading manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[0.649971] (navigation) StdoutLine: {'line': b"writing manifest file '../../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[0.650369] (navigation) StdoutLine: {'line': b'running build\n'}
+[0.650556] (navigation) StdoutLine: {'line': b'running build_py\n'}
+[0.650996] (navigation) StdoutLine: {'line': b'running install\n'}
+[0.652067] (navigation) StdoutLine: {'line': b'running install_lib\n'}
+[0.654681] (navigation) StdoutLine: {'line': b'running install_data\n'}
+[0.655251] (navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.657508] (navigation) StdoutLine: {'line': b"removing '/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages/navigation-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.657831] (navigation) StdoutLine: {'line': b'Copying ../../build/navigation/navigation.egg-info to /home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages/navigation-0.0.0-py3.8.egg-info\n'}
+[0.658952] (navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[0.682446] (navigation) StdoutLine: {'line': b'Installing gps_publisher script to /home/user/Projects/dev_ws/install/navigation/lib/navigation\n'}
+[0.682772] (navigation) StdoutLine: {'line': b'Installing heading_calculator script to /home/user/Projects/dev_ws/install/navigation/lib/navigation\n'}
+[0.683002] (navigation) StdoutLine: {'line': b'Installing navigation_handler script to /home/user/Projects/dev_ws/install/navigation/lib/navigation\n'}
+[0.683335] (navigation) StdoutLine: {'line': b'Installing proximity_calculator script to /home/user/Projects/dev_ws/install/navigation/lib/navigation\n'}
+[0.683497] (navigation) StdoutLine: {'line': b'Installing test_node script to /home/user/Projects/dev_ws/install/navigation/lib/navigation\n'}
+[0.683741] (navigation) StdoutLine: {'line': b"writing list of installed files to '/home/user/Projects/dev_ws/build/navigation/install.log'\n"}
+[0.700641] (-) TimerEvent: {}
+[0.707463] (navigation) CommandEnded: {'returncode': 0}
+[0.715793] (navigation) JobEnded: {'identifier': 'navigation', 'rc': 0}
+[0.801023] (-) TimerEvent: {}
+[0.812341] (mm_interfaces) JobEnded: {'identifier': 'mm_interfaces', 'rc': 0}
+[0.813904] (pathfinding) JobStarted: {'identifier': 'pathfinding'}
+[0.901215] (-) TimerEvent: {}
+[1.001663] (-) TimerEvent: {}
+[1.057370] (pathfinding) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/pathfinding', 'build', '--build-base', '/home/user/Projects/dev_ws/build/pathfinding/build', 'install', '--prefix', '/home/user/Projects/dev_ws/install/pathfinding', '--record', '/home/user/Projects/dev_ws/build/pathfinding/install.log', '--single-version-externally-managed'], 'cwd': '/home/user/Projects/dev_ws/src/pathfinding', 'env': {'HOSTNAME': 'asus-TUF', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/user', 'OLDPWD': '/home/user/Projects', 'PYTHONUNBUFFERED': '1', 'ROS_PYTHON_VERSION': '3', '_colcon_cd_root': '/home/user/Projects/dev_ws', 'COLCON_PREFIX_PATH': '/home/user/Projects/dev_ws/install:/home/user/Projects/dev_ws/src/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'graphics', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': ':di=1;33:ln=36', 'AMENT_PREFIX_PATH': '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/home/user/Projects/dev_ws/src/install/mm_interfaces:/opt/ros/foxy', 'PWD': '/home/user/Projects/dev_ws/build/pathfinding', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/mm_interfaces'}, 'shell': False}
+[1.101778] (-) TimerEvent: {}
+[1.202133] (-) TimerEvent: {}
+[1.270419] (pathfinding) StdoutLine: {'line': b'running egg_info\n'}
+[1.270953] (pathfinding) StdoutLine: {'line': b'writing ../../build/pathfinding/pathfinding.egg-info/PKG-INFO\n'}
+[1.271187] (pathfinding) StdoutLine: {'line': b'writing dependency_links to ../../build/pathfinding/pathfinding.egg-info/dependency_links.txt\n'}
+[1.271386] (pathfinding) StdoutLine: {'line': b'writing entry points to ../../build/pathfinding/pathfinding.egg-info/entry_points.txt\n'}
+[1.271532] (pathfinding) StdoutLine: {'line': b'writing requirements to ../../build/pathfinding/pathfinding.egg-info/requires.txt\n'}
+[1.271697] (pathfinding) StdoutLine: {'line': b'writing top-level names to ../../build/pathfinding/pathfinding.egg-info/top_level.txt\n'}
+[1.302246] (-) TimerEvent: {}
+[1.318838] (pathfinding) StdoutLine: {'line': b"reading manifest file '../../build/pathfinding/pathfinding.egg-info/SOURCES.txt'\n"}
+[1.320058] (pathfinding) StdoutLine: {'line': b"writing manifest file '../../build/pathfinding/pathfinding.egg-info/SOURCES.txt'\n"}
+[1.320317] (pathfinding) StdoutLine: {'line': b'running build\n'}
+[1.320440] (pathfinding) StdoutLine: {'line': b'running build_py\n'}
+[1.320774] (pathfinding) StdoutLine: {'line': b'running install\n'}
+[1.321888] (pathfinding) StdoutLine: {'line': b'running install_lib\n'}
+[1.323652] (pathfinding) StdoutLine: {'line': b'running install_data\n'}
+[1.324095] (pathfinding) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.325789] (pathfinding) StdoutLine: {'line': b"removing '/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages/pathfinding-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.326089] (pathfinding) StdoutLine: {'line': b'Copying ../../build/pathfinding/pathfinding.egg-info to /home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages/pathfinding-0.0.0-py3.8.egg-info\n'}
+[1.327004] (pathfinding) StdoutLine: {'line': b'running install_scripts\n'}
+[1.346830] (pathfinding) StdoutLine: {'line': b'Installing pathfinding_service script to /home/user/Projects/dev_ws/install/pathfinding/lib/pathfinding\n'}
+[1.347250] (pathfinding) StdoutLine: {'line': b"writing list of installed files to '/home/user/Projects/dev_ws/build/pathfinding/install.log'\n"}
+[1.366654] (pathfinding) CommandEnded: {'returncode': 0}
+[1.373620] (pathfinding) JobEnded: {'identifier': 'pathfinding', 'rc': 0}
+[1.374465] (-) EventReactorShutdown: {}

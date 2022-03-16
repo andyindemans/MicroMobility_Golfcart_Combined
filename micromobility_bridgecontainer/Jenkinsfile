@@ -1,0 +1,68 @@
+pipeline {
+    agent { label 'smartictBuilder' }
+    tools {nodejs "Nodejs"}	
+    environment { 
+    repoName="micromobility_bridgecontainer"	
+    dockerPath="./Docker/Dockerfile"    
+    harbor_project = 'micromobility'  
+    registry = "192.168.1.5" 
+    registryCredential = "2cfe0062-a95b-4e84-a28a-f3185ad83341"     
+	    
+	    
+      }         
+	
+    stages {	
+      
+         stage('Code Quality') {
+                   steps {
+                       script {
+                           sh 'echo Code Quality'
+                           def scannerHome = tool 'SonarQubeScanner';   
+                           withSonarQubeEnv("sonarSmartict") {
+                           sh "${tool("SonarQubeScanner")}/bin/sonar-scanner \
+                           -Dsonar.projectKey=$repoName"	   
+
+                                       }
+                               }
+                           }
+                        }
+          stage('Docker build') {
+                   steps {
+                       script {
+			  sh 'echo Fetching code'
+                          sh ' docker build  -t $repoName . -f $dockerPath'
+   
+                               }
+                           }
+                        }
+
+          stage('Deploy to GoHarbor') {
+                    steps {
+                        script {
+                            sh 'echo Deploy to GoHarbor '
+                            sh "docker tag $repoName $registry/$harbor_project/$repoName"
+                            docker.withRegistry( 'https://192.168.1.5', registryCredential ) { 
+                            sh "docker push $registry/$harbor_project/$repoName"
+                         
+			}
+
+                    }
+                 
+             }
+
+     }
+	 stage('Clean-up') {
+               steps {
+                  script {
+                      sh 'docker rmi $registry/$harbor_project/$repoName'
+		      sh 'docker rmi $repoName'	 
+                           }
+			  
+                        }
+                   }
+	    
+}
+}
+
+
+

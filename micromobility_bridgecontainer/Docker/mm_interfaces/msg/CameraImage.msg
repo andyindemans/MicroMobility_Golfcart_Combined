@@ -1,0 +1,2 @@
+bool sensor_error
+string image64

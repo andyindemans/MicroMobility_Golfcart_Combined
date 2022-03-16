@@ -1,0 +1,2 @@
+CoordinateMsg current_position
+CoordinateMsg next_position

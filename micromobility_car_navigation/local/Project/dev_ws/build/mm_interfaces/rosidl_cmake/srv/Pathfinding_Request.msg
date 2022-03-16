@@ -1,0 +1,3 @@
+float64 current_long
+float64 current_lat
+int64 end_node_id

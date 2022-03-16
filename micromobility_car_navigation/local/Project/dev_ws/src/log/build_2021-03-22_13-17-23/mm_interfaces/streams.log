@@ -1,0 +1,89 @@
+[0.028s] Invoking command in '/home/user/Projects/dev_ws/src/build/mm_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/opt/ros/foxy /usr/bin/cmake --build /home/user/Projects/dev_ws/src/build/mm_interfaces -- -j12 -l12
+[0.065s] -- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.082s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+[0.082s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.278s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[0.302s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.309s] -- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.432s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.465s] -- Found rosidl_default_generators: 1.0.0 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.478s] -- Found sensor_msgs: 2.0.3 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[0.694s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.5") 
+[0.982s] -- Found ament_cmake_ros: 0.9.1 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[1.341s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.550s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.572s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3.5") 
+[1.572s] -- Found python_cmake_module: 0.8.0 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[1.590s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.590s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[1.590s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+[1.705s] -- Configuring done
+[1.880s] -- Generating done
+[1.886s] -- Build files have been written to: /home/user/Projects/dev_ws/src/build/mm_interfaces
+[1.921s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.921s] [35m[1mScanning dependencies of target mm_interfaces__cpp[0m
+[1.940s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.040s] Traceback (most recent call last):
+[2.041s]   File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 40, in <module>
+[2.041s] Traceback (most recent call last):
+[2.041s]   File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 40, in <module>
+[2.041s]     sys.exit(main())
+[2.041s]   File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 34, in main
+[2.041s]     sys.exit(main())
+[2.041s]   File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 34, in main
+[2.042s]     return generate_cpp(
+[2.042s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_cpp/__init__.py", line 38, in generate_cpp
+[2.042s]     return generate_c(
+[2.042s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_c/__init__.py", line 37, in generate_c
+[2.042s]     generate_files(
+[2.042s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[2.042s]     generate_files(
+[2.042s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+[2.043s]     idl_file = parse_idl_file(locator)
+[2.043s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[2.043s]     idl_file = parse_idl_file(locator)
+[2.043s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+[2.043s]     content = parse_idl_string(string, png_file=png_file)
+[2.043s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[2.044s]     content = parse_idl_string(string, png_file=png_file)
+[2.044s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+[2.044s]     tree = get_ast_from_idl_string(idl_string)
+[2.044s]       File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+[2.044s] tree = get_ast_from_idl_string(idl_string)
+[2.044s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+[2.044s]     _parser = Lark(grammar, start='specification')    
+[2.044s] _parser = Lark(grammar, start='specification')  File "/usr/lib/python3/dist-packages/lark/lark.py", line 177, in __init__
+[2.045s] 
+[2.045s]   File "/usr/lib/python3/dist-packages/lark/lark.py", line 177, in __init__
+[2.045s]         self.grammar = load_grammar(grammar, self.source)self.grammar = load_grammar(grammar, self.source)
+[2.045s] 
+[2.045s]   File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 701, in load_grammar
+[2.045s]   File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 701, in load_grammar
+[2.045s]         tree = self.canonize_tree.transform( self.parser.parse(grammar_text+'\n') )tree = self.canonize_tree.transform( self.parser.parse(grammar_text+'\n') )
+[2.045s] 
+[2.046s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 147, in transform
+[2.046s]   File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 88, in parse
+[2.046s]     subtree.children = list(self._transform_children(subtree.children))
+[2.046s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 66, in _transform_children
+[2.046s]     return self._parse(token_stream, start)
+[2.046s]   File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 54, in _parse
+[2.046s]     yield self._transform_tree(c)
+[2.046s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 143, in _transform_tree
+[2.047s]     return self.parser.parse(input, start, *args)
+[2.047s]   File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 35, in parse
+[2.047s]     return self._call_userfunc(tree)
+[2.047s]   File "/usr/lib/python3/dist-packages/lark/visitors.py", line 29, in _call_userfunc
+[2.047s]     def _call_userfunc(self, tree, new_children=None):
+[2.047s] KeyboardInterrupt
+[2.047s]     return self.parser.parse(*args)
+[2.047s]   File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 94, in parse
+[2.048s]     reduce(arg)
+[2.048s]   File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 71, in reduce
+[2.048s]     del value_stack[-size:]
+[2.048s] KeyboardInterrupt
+[2.054s] make[2]: *** [CMakeFiles/mm_interfaces__cpp.dir/build.make:208: rosidl_generator_cpp/mm_interfaces/msg/mm_sensor_msg.hpp] Interrupt
+[2.054s] make[2]: *** [CMakeFiles/mm_interfaces__rosidl_generator_c.dir/build.make:172: rosidl_generator_c/mm_interfaces/msg/mm_sensor_msg.h] Interrupt
+[2.054s] make[1]: *** [CMakeFiles/Makefile2:418: CMakeFiles/mm_interfaces__cpp.dir/all] Interrupt
+[2.054s] make[1]: *** [CMakeFiles/Makefile2:210: CMakeFiles/mm_interfaces__rosidl_generator_c.dir/all] Interrupt
+[2.054s] make: *** [Makefile:141: all] Interrupt
+[2.056s] Invoked command in '/home/user/Projects/dev_ws/src/build/mm_interfaces' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/opt/ros/foxy /usr/bin/cmake --build /home/user/Projects/dev_ws/src/build/mm_interfaces -- -j12 -l12

@@ -1,0 +1,2 @@
+
+CoordinateMsg[] path

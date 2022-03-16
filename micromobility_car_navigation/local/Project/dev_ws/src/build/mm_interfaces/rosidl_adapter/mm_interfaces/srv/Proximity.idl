@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from mm_interfaces/srv/Proximity.srv
+// generated code does not contain a copyright notice
+
+#include "mm_interfaces/msg/CoordinateMsg.idl"
+
+module mm_interfaces {
+  module srv {
+    struct Proximity_Request {
+      mm_interfaces::msg::CoordinateMsg current_position;
+
+      mm_interfaces::msg::CoordinateMsg next_node;
+    };
+    struct Proximity_Response {
+      double distance_to;
+    };
+  };
+};

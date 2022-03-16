@@ -1,0 +1,15 @@
+version: "3.5"
+
+services:
+  navigation:
+    image: micromobility_car_navigation:latest
+    container_name: micromobility_car_navigation_container
+    stdin_open: true
+    tty: true
+    network_mode: "host"
+    volumes: 
+    - ../micromobility_car_navigation/local/Project:/home/user/Projects
+    privileged: true
+
+
+    

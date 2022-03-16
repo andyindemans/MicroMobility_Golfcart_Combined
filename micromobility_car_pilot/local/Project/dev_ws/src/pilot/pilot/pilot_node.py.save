@@ -1,0 +1,37 @@
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+from std_msgs.msg import Float64
+
+class PilotNode(Node):
+    def __init__(self):
+        super().__init__('pilot_node')
+        super().__init__('test_node')
+        self.subscription = self.create_subscription(
+            Float64,
+            'next_heading',
+            self.listener_callback,
+            10)
+
+        self.get_logger().info("pilot node waiting for incoming values...")
+        
+    
+    def next_heading_callback(self, msg):
+        print("heading callback werkt")
+        self.get_logger().info(f"pilot turning {msg.data}")
+
+
+
+def main(args=None):
+
+    rclpy.init(args=args)
+    pilot_node = PilotNode()
+    rclpy.spin(pilot_node)
+
+    pilot_node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+

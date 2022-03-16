@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from mm_interfaces/srv/Pathfinding.srv
+// generated code does not contain a copyright notice
+
+#include "mm_interfaces/msg/CoordinateMsg.idl"
+
+module mm_interfaces {
+  module srv {
+    struct Pathfinding_Request {
+      double current_long;
+
+      double current_lat;
+
+      int64 end_node_id;
+    };
+    struct Pathfinding_Response {
+      sequence<mm_interfaces::msg::CoordinateMsg> path;
+    };
+  };
+};

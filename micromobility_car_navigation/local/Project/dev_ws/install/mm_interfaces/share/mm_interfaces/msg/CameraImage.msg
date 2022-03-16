@@ -1,0 +1,2 @@
+bool sensor_error
+sensor_msgs/Image image

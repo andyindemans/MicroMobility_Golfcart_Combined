@@ -1,0 +1,73 @@
+[0.000000] (-) TimerEvent: {}
+[0.000496] (mm_interfaces) JobQueued: {'identifier': 'mm_interfaces', 'dependencies': OrderedDict()}
+[0.000642] (navigation) JobQueued: {'identifier': 'navigation', 'dependencies': OrderedDict()}
+[0.000674] (pathfinding) JobQueued: {'identifier': 'pathfinding', 'dependencies': OrderedDict([('mm_interfaces', '/home/user/Projects/dev_ws/src/install/mm_interfaces')])}
+[0.001117] (mm_interfaces) JobStarted: {'identifier': 'mm_interfaces'}
+[0.012185] (navigation) JobStarted: {'identifier': 'navigation'}
+[0.022834] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'cmake'}
+[0.029416] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'build'}
+[0.031401] (mm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/Projects/dev_ws/src/build/mm_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/user/Projects/dev_ws/src/build/mm_interfaces', 'env': OrderedDict([('HOSTNAME', 'asus-TUF'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/user/Projects/dev_ws'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('_colcon_cd_root', '/home/user/Projects/dev_ws'), ('COLCON_PREFIX_PATH', '/home/user/Projects/dev_ws/install:/home/user/Projects/dev_ws/src/install'), ('ROS_DISTRO', 'foxy'), ('PROXIMITY', '1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'graphics'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('LS_COLORS', ':di=1;33:ln=36'), ('AMENT_PREFIX_PATH', '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/home/user/Projects/dev_ws/src/install/mm_interfaces:/opt/ros/foxy'), ('DEFAULT_THROTTLE', '5'), ('AVOIDANCE_DISTANCE', '5'), ('PWD', '/home/user/Projects/dev_ws/src/build/mm_interfaces'), ('END_NODE_ID', '140'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/mm_interfaces:/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/opt/ros/foxy'), ('AVOIDANCE_ANGLE', '20')]), 'shell': False}
+[0.091313] (mm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.100009] (-) TimerEvent: {}
+[0.122941] (mm_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") \n'}
+[0.123181] (mm_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.200118] (-) TimerEvent: {}
+[0.283303] (navigation) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/navigation', 'build', '--build-base', '/home/user/Projects/dev_ws/src/build/navigation/build', 'install', '--prefix', '/home/user/Projects/dev_ws/src/install/navigation', '--record', '/home/user/Projects/dev_ws/src/build/navigation/install.log', '--single-version-externally-managed'], 'cwd': '/home/user/Projects/dev_ws/src/navigation', 'env': {'HOSTNAME': 'asus-TUF', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/user', 'OLDPWD': '/home/user/Projects/dev_ws', 'PYTHONUNBUFFERED': '1', 'ROS_PYTHON_VERSION': '3', '_colcon_cd_root': '/home/user/Projects/dev_ws', 'COLCON_PREFIX_PATH': '/home/user/Projects/dev_ws/install:/home/user/Projects/dev_ws/src/install', 'ROS_DISTRO': 'foxy', 'PROXIMITY': '1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'graphics', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': ':di=1;33:ln=36', 'AMENT_PREFIX_PATH': '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/pathfinding:/home/user/Projects/dev_ws/src/install/navigation:/home/user/Projects/dev_ws/src/install/mm_interfaces:/opt/ros/foxy', 'DEFAULT_THROTTLE': '5', 'AVOIDANCE_DISTANCE': '5', 'PWD': '/home/user/Projects/dev_ws/src/build/navigation', 'END_NODE_ID': '140', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/src/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/src/install/mm_interfaces', 'AVOIDANCE_ANGLE': '20'}, 'shell': False}
+[0.300215] (-) TimerEvent: {}
+[0.340363] (mm_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)\n'}
+[0.367845] (mm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.374764] (mm_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400312] (-) TimerEvent: {}
+[0.482517] (navigation) StdoutLine: {'line': b'running egg_info\n'}
+[0.483111] (navigation) StdoutLine: {'line': b'writing ../build/navigation/navigation.egg-info/PKG-INFO\n'}
+[0.483354] (navigation) StdoutLine: {'line': b'writing dependency_links to ../build/navigation/navigation.egg-info/dependency_links.txt\n'}
+[0.483625] (navigation) StdoutLine: {'line': b'writing entry points to ../build/navigation/navigation.egg-info/entry_points.txt\n'}
+[0.483879] (navigation) StdoutLine: {'line': b'writing requirements to ../build/navigation/navigation.egg-info/requires.txt\n'}
+[0.484058] (navigation) StdoutLine: {'line': b'writing top-level names to ../build/navigation/navigation.egg-info/top_level.txt\n'}
+[0.500400] (-) TimerEvent: {}
+[0.520145] (navigation) StdoutLine: {'line': b"reading manifest file '../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[0.522369] (mm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.545366] (navigation) StdoutLine: {'line': b"writing manifest file '../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[0.545735] (navigation) StdoutLine: {'line': b'running build\n'}
+[0.545975] (navigation) StdoutLine: {'line': b'running build_py\n'}
+[0.546144] (navigation) StdoutLine: {'line': b'copying navigation/heading_calculator.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.555227] (mm_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.0 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.567231] (mm_interfaces) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.3 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[0.576190] (navigation) StdoutLine: {'line': b'copying navigation/navigation_handler.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.579668] (navigation) StdoutLine: {'line': b'copying navigation/test_node.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.579908] (navigation) StdoutLine: {'line': b'copying navigation/coordinate.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.589775] (navigation) StdoutLine: {'line': b'copying navigation/proximity_calculator.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.600481] (-) TimerEvent: {}
+[0.621881] (navigation) StdoutLine: {'line': b'running install\n'}
+[0.622823] (navigation) StdoutLine: {'line': b'running install_lib\n'}
+[0.624170] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/heading_calculator.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.624511] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/navigation_handler.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.624860] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/test_node.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.625128] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/coordinate.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.625321] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/proximity_calculator.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.625801] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/heading_calculator.py to heading_calculator.cpython-38.pyc\n'}
+[0.628627] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/navigation_handler.py to navigation_handler.cpython-38.pyc\n'}
+[0.629866] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/test_node.py to test_node.cpython-38.pyc\n'}
+[0.630348] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/coordinate.py to coordinate.cpython-38.pyc\n'}
+[0.630742] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/proximity_calculator.py to proximity_calculator.cpython-38.pyc\n'}
+[0.631486] (navigation) StdoutLine: {'line': b'running install_data\n'}
+[0.632085] (navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.633929] (navigation) StdoutLine: {'line': b"removing '/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.634297] (navigation) StdoutLine: {'line': b'Copying ../build/navigation/navigation.egg-info to /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation-0.0.0-py3.8.egg-info\n'}
+[0.635838] (navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[0.656881] (navigation) StdoutLine: {'line': b'Installing gps_publisher script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.657135] (navigation) StdoutLine: {'line': b'Installing heading_calculator script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.657238] (navigation) StdoutLine: {'line': b'Installing navigation_handler script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.657418] (navigation) StdoutLine: {'line': b'Installing proximity_calculator script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.657521] (navigation) StdoutLine: {'line': b'Installing test_node script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.657626] (navigation) StdoutLine: {'line': b"writing list of installed files to '/home/user/Projects/dev_ws/src/build/navigation/install.log'\n"}
+[0.677961] (navigation) CommandEnded: {'returncode': 0}
+[0.692851] (navigation) JobEnded: {'identifier': 'navigation', 'rc': 0}
+[0.700587] (-) TimerEvent: {}
+[0.790710] (mm_interfaces) StderrLine: {'line': b'make: *** [Makefile:2668: cmake_check_build_system] Interrupt\n'}
+[0.792247] (mm_interfaces) CommandEnded: {'returncode': -2}
+[0.800740] (-) TimerEvent: {}
+[0.901123] (-) TimerEvent: {}
+[0.968665] (mm_interfaces) JobEnded: {'identifier': 'mm_interfaces', 'rc': 'SIGINT'}
+[0.979211] (pathfinding) JobSkipped: {'identifier': 'pathfinding'}
+[0.979262] (-) EventReactorShutdown: {}

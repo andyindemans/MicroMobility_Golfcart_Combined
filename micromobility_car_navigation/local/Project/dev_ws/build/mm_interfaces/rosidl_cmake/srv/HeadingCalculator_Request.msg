@@ -1,0 +1,5 @@
+float64 cart_bearing
+float64 cart_lat
+float64 cart_long
+float64 next_node_lat
+float64 next_node_long

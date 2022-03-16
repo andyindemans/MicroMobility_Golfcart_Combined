@@ -1,0 +1,2 @@
+int64 start_node_id
+int64 end_node_id

@@ -1,0 +1,16 @@
+[0.000000] (-) TimerEvent: {}
+[0.000384] (realsense_msgs) JobQueued: {'identifier': 'realsense_msgs', 'dependencies': OrderedDict()}
+[0.000439] (realsense_ros) JobQueued: {'identifier': 'realsense_ros', 'dependencies': OrderedDict([('realsense_msgs', '/home/user/Projects/dev_ws/install/realsense_msgs')])}
+[0.000478] (realsense_node) JobQueued: {'identifier': 'realsense_node', 'dependencies': OrderedDict([('realsense_msgs', '/home/user/Projects/dev_ws/install/realsense_msgs'), ('realsense_ros', '/home/user/Projects/dev_ws/install/realsense_ros')])}
+[0.000706] (realsense_examples) JobQueued: {'identifier': 'realsense_examples', 'dependencies': OrderedDict([('realsense_msgs', '/home/user/Projects/dev_ws/install/realsense_msgs'), ('realsense_ros', '/home/user/Projects/dev_ws/install/realsense_ros'), ('realsense_node', '/home/user/Projects/dev_ws/install/realsense_node')])}
+[0.000941] (realsense_msgs) JobStarted: {'identifier': 'realsense_msgs'}
+[0.009455] (realsense_msgs) JobProgress: {'identifier': 'realsense_msgs', 'progress': 'cmake'}
+[0.010095] (realsense_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/user/Projects/dev_ws/src/ros2_intel_realsense/realsense_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/user/Projects/dev_ws/install/realsense_msgs'], 'cwd': '/home/user/Projects/dev_ws/build/realsense_msgs', 'env': OrderedDict([('SUDO_GID', '1000'), ('MAIL', '/var/mail/root'), ('USER', 'root'), ('HOSTNAME', 'asus-TUF'), ('HOME', '/root'), ('SUDO_UID', '1000'), ('LOGNAME', 'root'), ('TERM', 'xterm'), ('PATH', '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', ':di=1;33:ln=36'), ('SUDO_COMMAND', '/usr/bin/colcon build --symlink-install'), ('SHELL', '/bin/bash'), ('SUDO_USER', 'user'), ('LC_ALL', 'C.UTF-8'), ('PWD', '/home/user/Projects/dev_ws/build/realsense_msgs'), ('COLCON', '1')]), 'shell': False}
+[0.020504] (realsense_msgs) StderrLine: {'line': b'CMake Error: The current CMakeCache.txt directory /home/user/Projects/dev_ws/build/realsense_msgs/CMakeCache.txt is different than the directory /home/user/Projects/ros2_ws/build/realsense_msgs where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt\n'}
+[0.020791] (realsense_msgs) StderrLine: {'line': b'CMake Error: The source "/home/user/Projects/dev_ws/src/ros2_intel_realsense/realsense_msgs/CMakeLists.txt" does not match the source "/home/user/Projects/ros2_ws/src/ros2_intel_realsense/realsense_msgs/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.\n'}
+[0.021849] (realsense_msgs) CommandEnded: {'returncode': 1}
+[0.044425] (realsense_msgs) JobEnded: {'identifier': 'realsense_msgs', 'rc': 1}
+[0.045401] (realsense_ros) JobSkipped: {'identifier': 'realsense_ros'}
+[0.045443] (realsense_node) JobSkipped: {'identifier': 'realsense_node'}
+[0.045466] (realsense_examples) JobSkipped: {'identifier': 'realsense_examples'}
+[0.045487] (-) EventReactorShutdown: {}

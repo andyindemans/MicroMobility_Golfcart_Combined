@@ -1,0 +1,171 @@
+[0.000000] (-) TimerEvent: {}
+[0.000426] (mm_interfaces) JobQueued: {'identifier': 'mm_interfaces', 'dependencies': OrderedDict()}
+[0.000565] (navigation) JobQueued: {'identifier': 'navigation', 'dependencies': OrderedDict()}
+[0.000618] (pathfinding) JobQueued: {'identifier': 'pathfinding', 'dependencies': OrderedDict([('mm_interfaces', '/home/user/Projects/dev_ws/src/install/mm_interfaces')])}
+[0.001017] (mm_interfaces) JobStarted: {'identifier': 'mm_interfaces'}
+[0.011454] (navigation) JobStarted: {'identifier': 'navigation'}
+[0.023297] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'cmake'}
+[0.026625] (mm_interfaces) JobProgress: {'identifier': 'mm_interfaces', 'progress': 'build'}
+[0.027995] (mm_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/Projects/dev_ws/src/build/mm_interfaces', '--', '-j12', '-l12'], 'cwd': '/home/user/Projects/dev_ws/src/build/mm_interfaces', 'env': OrderedDict([('TMUX', '/tmp/tmux-1000/default,24011,0'), ('HOSTNAME', 'asus-TUF'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/user'), ('OLDPWD', '/home/user/Projects/dev_ws'), ('PYTHONUNBUFFERED', '1'), ('ROS_PYTHON_VERSION', '3'), ('_colcon_cd_root', '/home/user/Projects/dev_ws'), ('COLCON_PREFIX_PATH', '/home/user/Projects/dev_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'graphics'), ('TERM', 'screen-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/user/.local/bin:/home/user/bin:/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', ':di=1;33:ln=36'), ('AMENT_PREFIX_PATH', '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('PWD', '/home/user/Projects/dev_ws/src/build/mm_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('COLCON', '1'), ('TMUX_PANE', '%2'), ('CMAKE_PREFIX_PATH', '/home/user/Projects/dev_ws/install/mm_interfaces:/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/opt/ros/foxy')]), 'shell': False}
+[0.065801] (mm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.083178] (mm_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") \n'}
+[0.083507] (mm_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099980] (-) TimerEvent: {}
+[0.200328] (-) TimerEvent: {}
+[0.272239] (navigation) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/navigation', 'build', '--build-base', '/home/user/Projects/dev_ws/src/build/navigation/build', 'install', '--prefix', '/home/user/Projects/dev_ws/src/install/navigation', '--record', '/home/user/Projects/dev_ws/src/build/navigation/install.log', '--single-version-externally-managed'], 'cwd': '/home/user/Projects/dev_ws/src/navigation', 'env': {'TMUX': '/tmp/tmux-1000/default,24011,0', 'HOSTNAME': 'asus-TUF', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/user', 'OLDPWD': '/home/user/Projects/dev_ws', 'PYTHONUNBUFFERED': '1', 'ROS_PYTHON_VERSION': '3', '_colcon_cd_root': '/home/user/Projects/dev_ws', 'COLCON_PREFIX_PATH': '/home/user/Projects/dev_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'graphics', 'TERM': 'screen-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/user/.local/bin:/home/user/bin:/home/user/.local/bin:/opt/ros/foxy/bin:/home/user/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': ':di=1;33:ln=36', 'AMENT_PREFIX_PATH': '/home/user/Projects/dev_ws/install/pathfinding:/home/user/Projects/dev_ws/install/navigation:/home/user/Projects/dev_ws/install/mm_interfaces:/opt/ros/foxy', 'SHELL': '/bin/bash', 'PWD': '/home/user/Projects/dev_ws/src/build/navigation', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/pathfinding/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/navigation/lib/python3.8/site-packages:/home/user/Projects/dev_ws/install/mm_interfaces/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'TMUX_PANE': '%2', 'CMAKE_PREFIX_PATH': '/home/user/Projects/dev_ws/install/mm_interfaces'}, 'shell': False}
+[0.279368] (mm_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)\n'}
+[0.300455] (-) TimerEvent: {}
+[0.303003] (mm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.309566] (mm_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400542] (-) TimerEvent: {}
+[0.433073] (mm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.466319] (mm_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.0 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.479013] (mm_interfaces) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.3 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[0.487515] (navigation) StdoutLine: {'line': b'running egg_info\n'}
+[0.488146] (navigation) StdoutLine: {'line': b'writing ../build/navigation/navigation.egg-info/PKG-INFO\n'}
+[0.488464] (navigation) StdoutLine: {'line': b'writing dependency_links to ../build/navigation/navigation.egg-info/dependency_links.txt\n'}
+[0.488753] (navigation) StdoutLine: {'line': b'writing entry points to ../build/navigation/navigation.egg-info/entry_points.txt\n'}
+[0.489024] (navigation) StdoutLine: {'line': b'writing requirements to ../build/navigation/navigation.egg-info/requires.txt\n'}
+[0.489297] (navigation) StdoutLine: {'line': b'writing top-level names to ../build/navigation/navigation.egg-info/top_level.txt\n'}
+[0.500622] (-) TimerEvent: {}
+[0.537622] (navigation) StdoutLine: {'line': b"reading manifest file '../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[0.582858] (navigation) StdoutLine: {'line': b"writing manifest file '../build/navigation/navigation.egg-info/SOURCES.txt'\n"}
+[0.583172] (navigation) StdoutLine: {'line': b'running build\n'}
+[0.583420] (navigation) StdoutLine: {'line': b'running build_py\n'}
+[0.583629] (navigation) StdoutLine: {'line': b'copying navigation/heading_calculator_service.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.583842] (navigation) StdoutLine: {'line': b'copying navigation/heading_calculator.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.584035] (navigation) StdoutLine: {'line': b'copying navigation/proximity_service.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.584270] (navigation) StdoutLine: {'line': b'copying navigation/gps_publisher.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.584464] (navigation) StdoutLine: {'line': b'copying navigation/navigation_handler.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.584659] (navigation) StdoutLine: {'line': b'copying navigation/test.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.584893] (navigation) StdoutLine: {'line': b'copying navigation/proximity_calculator.py -> /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation\n'}
+[0.585077] (navigation) StdoutLine: {'line': b'running install\n'}
+[0.585681] (navigation) StdoutLine: {'line': b'running install_lib\n'}
+[0.586777] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/heading_calculator_service.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.587013] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/heading_calculator.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.587216] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/proximity_service.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.587449] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/gps_publisher.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.587634] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/navigation_handler.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.587814] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/test.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.587973] (navigation) StdoutLine: {'line': b'copying /home/user/Projects/dev_ws/src/build/navigation/build/lib/navigation/proximity_calculator.py -> /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation\n'}
+[0.588329] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/heading_calculator_service.py to heading_calculator_service.cpython-38.pyc\n'}
+[0.590224] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/heading_calculator.py to heading_calculator.cpython-38.pyc\n'}
+[0.590799] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/proximity_service.py to proximity_service.cpython-38.pyc\n'}
+[0.591321] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/gps_publisher.py to gps_publisher.cpython-38.pyc\n'}
+[0.592196] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/navigation_handler.py to navigation_handler.cpython-38.pyc\n'}
+[0.592859] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/test.py to test.cpython-38.pyc\n'}
+[0.593775] (navigation) StdoutLine: {'line': b'byte-compiling /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation/proximity_calculator.py to proximity_calculator.cpython-38.pyc\n'}
+[0.594501] (navigation) StdoutLine: {'line': b'running install_data\n'}
+[0.595084] (navigation) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.596975] (navigation) StdoutLine: {'line': b"removing '/home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.597316] (navigation) StdoutLine: {'line': b'Copying ../build/navigation/navigation.egg-info to /home/user/Projects/dev_ws/src/install/navigation/lib/python3.8/site-packages/navigation-0.0.0-py3.8.egg-info\n'}
+[0.600702] (-) TimerEvent: {}
+[0.623234] (navigation) StdoutLine: {'line': b'running install_scripts\n'}
+[0.645342] (navigation) StdoutLine: {'line': b'Installing gps_publisher script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.645704] (navigation) StdoutLine: {'line': b'Installing heading_calculator script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.645970] (navigation) StdoutLine: {'line': b'Installing heading_calculator_service script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.646156] (navigation) StdoutLine: {'line': b'Installing navigation_handler script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.646361] (navigation) StdoutLine: {'line': b'Installing proximity_calculator script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.646600] (navigation) StdoutLine: {'line': b'Installing proximity_service script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.646800] (navigation) StdoutLine: {'line': b'Installing test script to /home/user/Projects/dev_ws/src/install/navigation/lib/navigation\n'}
+[0.646993] (navigation) StdoutLine: {'line': b"writing list of installed files to '/home/user/Projects/dev_ws/src/build/navigation/install.log'\n"}
+[0.666234] (navigation) CommandEnded: {'returncode': 0}
+[0.681792] (navigation) JobEnded: {'identifier': 'navigation', 'rc': 0}
+[0.694493] (mm_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.5") \n'}
+[0.700814] (-) TimerEvent: {}
+[0.801076] (-) TimerEvent: {}
+[0.901337] (-) TimerEvent: {}
+[0.982809] (mm_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.1 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[1.001447] (-) TimerEvent: {}
+[1.101705] (-) TimerEvent: {}
+[1.201971] (-) TimerEvent: {}
+[1.302246] (-) TimerEvent: {}
+[1.342304] (mm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.402374] (-) TimerEvent: {}
+[1.502655] (-) TimerEvent: {}
+[1.551505] (mm_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.573161] (mm_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3.5") \n'}
+[1.573452] (mm_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.0 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[1.591182] (mm_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.591346] (mm_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[1.591475] (mm_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[1.602758] (-) TimerEvent: {}
+[1.703036] (-) TimerEvent: {}
+[1.705711] (mm_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.803129] (-) TimerEvent: {}
+[1.880778] (mm_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[1.886789] (mm_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/user/Projects/dev_ws/src/build/mm_interfaces\n'}
+[1.903223] (-) TimerEvent: {}
+[1.921550] (mm_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.922385] (mm_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target mm_interfaces__cpp\x1b[0m\n'}
+[1.941201] (mm_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.003341] (-) TimerEvent: {}
+[2.041343] (mm_interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[2.041651] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 40, in <module>\n'}
+[2.041802] (mm_interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n'}
+[2.041947] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 40, in <module>\n'}
+[2.042079] (mm_interfaces) StderrLine: {'line': b'    sys.exit(main())\n'}
+[2.042206] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 34, in main\n'}
+[2.042338] (mm_interfaces) StderrLine: {'line': b'    sys.exit(main())\n'}
+[2.042447] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 34, in main\n'}
+[2.042606] (mm_interfaces) StderrLine: {'line': b'    return generate_cpp(\n'}
+[2.042716] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_cpp/__init__.py", line 38, in generate_cpp\n'}
+[2.042825] (mm_interfaces) StderrLine: {'line': b'    return generate_c(\n'}
+[2.042934] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_c/__init__.py", line 37, in generate_c\n'}
+[2.043043] (mm_interfaces) StderrLine: {'line': b'    generate_files(\n'}
+[2.043154] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files\n'}
+[2.043302] (mm_interfaces) StderrLine: {'line': b'    generate_files(\n'}
+[2.043466] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files\n'}
+[2.043684] (mm_interfaces) StderrLine: {'line': b'    idl_file = parse_idl_file(locator)\n'}
+[2.043830] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file\n'}
+[2.044008] (mm_interfaces) StderrLine: {'line': b'    idl_file = parse_idl_file(locator)\n'}
+[2.044154] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file\n'}
+[2.044289] (mm_interfaces) StderrLine: {'line': b'    content = parse_idl_string(string, png_file=png_file)\n'}
+[2.044419] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string\n'}
+[2.044578] (mm_interfaces) StderrLine: {'line': b'    content = parse_idl_string(string, png_file=png_file)\n'}
+[2.044711] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string\n'}
+[2.044842] (mm_interfaces) StderrLine: {'line': b'    tree = get_ast_from_idl_string(idl_string)\n'}
+[2.044973] (mm_interfaces) StderrLine: {'line': b'      File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string\n'}
+[2.045105] (mm_interfaces) StderrLine: {'line': b'tree = get_ast_from_idl_string(idl_string)\n'}
+[2.045236] (mm_interfaces) StderrLine: {'line': b'  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string\n'}
+[2.045368] (mm_interfaces) StderrLine: {'line': b"    _parser = Lark(grammar, start='specification')    \n"}
+[2.045485] (mm_interfaces) StderrLine: {'line': b'_parser = Lark(grammar, start=\'specification\')  File "/usr/lib/python3/dist-packages/lark/lark.py", line 177, in __init__\n'}
+[2.045603] (mm_interfaces) StderrLine: {'line': b'\n'}
+[2.045719] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/lark.py", line 177, in __init__\n'}
+[2.045848] (mm_interfaces) StderrLine: {'line': b'        self.grammar = load_grammar(grammar, self.source)self.grammar = load_grammar(grammar, self.source)\n'}
+[2.045977] (mm_interfaces) StderrLine: {'line': b'\n'}
+[2.046095] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 701, in load_grammar\n'}
+[2.046229] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 701, in load_grammar\n'}
+[2.046359] (mm_interfaces) StderrLine: {'line': b"        tree = self.canonize_tree.transform( self.parser.parse(grammar_text+'\\n') )tree = self.canonize_tree.transform( self.parser.parse(grammar_text+'\\n') )\n"}
+[2.046500] (mm_interfaces) StderrLine: {'line': b'\n'}
+[2.046620] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 147, in transform\n'}
+[2.046741] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 88, in parse\n'}
+[2.046862] (mm_interfaces) StderrLine: {'line': b'    subtree.children = list(self._transform_children(subtree.children))\n'}
+[2.046982] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 66, in _transform_children\n'}
+[2.047104] (mm_interfaces) StderrLine: {'line': b'    return self._parse(token_stream, start)\n'}
+[2.047226] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 54, in _parse\n'}
+[2.047444] (mm_interfaces) StderrLine: {'line': b'    yield self._transform_tree(c)\n'}
+[2.047567] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 143, in _transform_tree\n'}
+[2.047683] (mm_interfaces) StderrLine: {'line': b'    return self.parser.parse(input, start, *args)\n'}
+[2.047799] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 35, in parse\n'}
+[2.047916] (mm_interfaces) StderrLine: {'line': b'    return self._call_userfunc(tree)\n'}
+[2.048031] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 29, in _call_userfunc\n'}
+[2.048147] (mm_interfaces) StderrLine: {'line': b'    def _call_userfunc(self, tree, new_children=None):\n'}
+[2.048275] (mm_interfaces) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[2.048387] (mm_interfaces) StderrLine: {'line': b'    return self.parser.parse(*args)\n'}
+[2.048529] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 94, in parse\n'}
+[2.048644] (mm_interfaces) StderrLine: {'line': b'    reduce(arg)\n'}
+[2.048756] (mm_interfaces) StderrLine: {'line': b'  File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 71, in reduce\n'}
+[2.048869] (mm_interfaces) StderrLine: {'line': b'    del value_stack[-size:]\n'}
+[2.048981] (mm_interfaces) StderrLine: {'line': b'KeyboardInterrupt\n'}
+[2.054922] (mm_interfaces) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mm_interfaces__cpp.dir/build.make:208: rosidl_generator_cpp/mm_interfaces/msg/mm_sensor_msg.hpp] Interrupt\n'}
+[2.055174] (mm_interfaces) StderrLine: {'line': b'make[2]: *** [CMakeFiles/mm_interfaces__rosidl_generator_c.dir/build.make:172: rosidl_generator_c/mm_interfaces/msg/mm_sensor_msg.h] Interrupt\n'}
+[2.055370] (mm_interfaces) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:418: CMakeFiles/mm_interfaces__cpp.dir/all] Interrupt\n'}
+[2.055476] (mm_interfaces) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:210: CMakeFiles/mm_interfaces__rosidl_generator_c.dir/all] Interrupt\n'}
+[2.055579] (mm_interfaces) StderrLine: {'line': b'make: *** [Makefile:141: all] Interrupt\n'}
+[2.056482] (mm_interfaces) CommandEnded: {'returncode': -2}
+[2.103487] (-) TimerEvent: {}
+[2.191843] (mm_interfaces) JobEnded: {'identifier': 'mm_interfaces', 'rc': 'SIGINT'}
+[2.203743] (pathfinding) JobSkipped: {'identifier': 'pathfinding'}
+[2.203896] (-) TimerEvent: {}
+[2.204185] (-) EventReactorShutdown: {}

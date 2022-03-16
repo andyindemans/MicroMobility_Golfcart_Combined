@@ -1,0 +1,63 @@
+Traceback (most recent call last):
+  File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 40, in <module>
+Traceback (most recent call last):
+  File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 40, in <module>
+    sys.exit(main())
+  File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 34, in main
+    sys.exit(main())
+  File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 34, in main
+    return generate_cpp(
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_cpp/__init__.py", line 38, in generate_cpp
+    return generate_c(
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_c/__init__.py", line 37, in generate_c
+    generate_files(
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+    generate_files(
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 74, in generate_files
+    idl_file = parse_idl_file(locator)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+    idl_file = parse_idl_file(locator)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 64, in parse_idl_file
+    content = parse_idl_string(string, png_file=png_file)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+    content = parse_idl_string(string, png_file=png_file)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 72, in parse_idl_string
+    tree = get_ast_from_idl_string(idl_string)
+      File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+tree = get_ast_from_idl_string(idl_string)
+  File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_parser/parser.py", line 88, in get_ast_from_idl_string
+    _parser = Lark(grammar, start='specification')    
+_parser = Lark(grammar, start='specification')  File "/usr/lib/python3/dist-packages/lark/lark.py", line 177, in __init__
+
+  File "/usr/lib/python3/dist-packages/lark/lark.py", line 177, in __init__
+        self.grammar = load_grammar(grammar, self.source)self.grammar = load_grammar(grammar, self.source)
+
+  File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 701, in load_grammar
+  File "/usr/lib/python3/dist-packages/lark/load_grammar.py", line 701, in load_grammar
+        tree = self.canonize_tree.transform( self.parser.parse(grammar_text+'\n') )tree = self.canonize_tree.transform( self.parser.parse(grammar_text+'\n') )
+
+  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 147, in transform
+  File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 88, in parse
+    subtree.children = list(self._transform_children(subtree.children))
+  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 66, in _transform_children
+    return self._parse(token_stream, start)
+  File "/usr/lib/python3/dist-packages/lark/parser_frontends.py", line 54, in _parse
+    yield self._transform_tree(c)
+  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 143, in _transform_tree
+    return self.parser.parse(input, start, *args)
+  File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 35, in parse
+    return self._call_userfunc(tree)
+  File "/usr/lib/python3/dist-packages/lark/visitors.py", line 29, in _call_userfunc
+    def _call_userfunc(self, tree, new_children=None):
+KeyboardInterrupt
+    return self.parser.parse(*args)
+  File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 94, in parse
+    reduce(arg)
+  File "/usr/lib/python3/dist-packages/lark/parsers/lalr_parser.py", line 71, in reduce
+    del value_stack[-size:]
+KeyboardInterrupt
+make[2]: *** [CMakeFiles/mm_interfaces__cpp.dir/build.make:208: rosidl_generator_cpp/mm_interfaces/msg/mm_sensor_msg.hpp] Interrupt
+make[2]: *** [CMakeFiles/mm_interfaces__rosidl_generator_c.dir/build.make:172: rosidl_generator_c/mm_interfaces/msg/mm_sensor_msg.h] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:418: CMakeFiles/mm_interfaces__cpp.dir/all] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:210: CMakeFiles/mm_interfaces__rosidl_generator_c.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt
