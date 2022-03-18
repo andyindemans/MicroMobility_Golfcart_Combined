@@ -2,6 +2,7 @@ from astar import AStar
 from micromobility_map import Node
 import math
 
+
 class MapSolver(AStar):
     def __init__(self):
         pass

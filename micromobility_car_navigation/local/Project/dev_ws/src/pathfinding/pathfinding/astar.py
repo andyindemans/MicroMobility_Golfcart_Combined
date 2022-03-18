@@ -6,6 +6,7 @@ from heapq import heappush, heappop, heapify
 
 Infinite = float('inf')
 
+
 class AStar:
     __metaclass__ = ABCMeta
     __slots__ = ()
@@ -58,6 +59,7 @@ class AStar:
             while current:
                 yield current.data
                 current = current.came_from
+
         if reversePath:
             return _gen()
         else:
@@ -66,7 +68,7 @@ class AStar:
     def astar(self, start, goal, graph, reversePath=False):
         if self.is_goal_reached(start, goal):
             return [start]
-        #searchNodes = AStar.SearchNodeDict()
+        # searchNodes = AStar.SearchNodeDict()
         searchNodes = []
         for node in graph.get_nodes():
             searchNode = AStar.SearchNode(node)
@@ -86,13 +88,13 @@ class AStar:
                 if neighbor.closed:
                     continue
                 tentative_gscore = current.gscore + \
-                    self.distance_between(current.data, neighbor.data)
+                                   self.distance_between(current.data, neighbor.data)
                 if tentative_gscore >= neighbor.gscore:
                     continue
                 neighbor.came_from = current
                 neighbor.gscore = tentative_gscore
                 neighbor.fscore = tentative_gscore + \
-                    self.heuristic_cost_estimate(neighbor.data, goal)
+                                  self.heuristic_cost_estimate(neighbor.data, goal)
                 if neighbor.out_openset:
                     neighbor.out_openset = False
                     heappush(openSet, neighbor)
@@ -103,8 +105,10 @@ class AStar:
         return None
 
 
-def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_estimate_fnct=lambda a, b: Infinite, distance_between_fnct=lambda a, b: 1.0, is_goal_reached_fnct=lambda a, b: a == b):
+def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_estimate_fnct=lambda a, b: Infinite,
+              distance_between_fnct=lambda a, b: 1.0, is_goal_reached_fnct=lambda a, b: a == b):
     """A non-class version of the path finding algorithm"""
+
     class FindPath(AStar):
 
         def heuristic_cost_estimate(self, current, goal):
@@ -118,4 +122,5 @@ def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_est
 
         def is_goal_reached(self, current, goal):
             return is_goal_reached_fnct(current, goal)
+
     return FindPath().astar(start, goal, reversePath)

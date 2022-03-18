@@ -7,6 +7,7 @@ from mapsolver import MapSolver
 import rclpy
 from rclpy.node import Node
 
+
 class PathfindingService(Node):
     def __init__(self):
         super().__init__('pathfinding_service')
@@ -21,25 +22,25 @@ class PathfindingService(Node):
         closest_prox = 1000000
         closest_node = None
         for node in self.graph.nodes:
-            newprox = self.get_euclidean_distance(current_lat, current_long, node.decimalcoordinate.latitude, node.decimalcoordinate.longtitude)
+            newprox = self.get_euclidean_distance(current_lat, current_long, node.decimalcoordinate.latitude,
+                                                  node.decimalcoordinate.longtitude)
             if newprox < closest_prox:
                 closest_prox = newprox
                 closest_node = node
         return closest_node.id
 
-    def get_euclidean_distance(self, current_lat, current_long, node_lat, node_long):    
+    def get_euclidean_distance(self, current_lat, current_long, node_lat, node_long):
         return math.sqrt((float(node_lat) - float(current_lat)) ** 2 + (
                 float(node_long) - float(current_long)) ** 2)
-        
-        
+
     def find_path_callback(self, request, response):
         start_node = self.nodes[self.find_start_node(request.current_lat, request.current_long)]
         end_node = self.nodes[request.end_node_id]
         self.get_logger().info(str(start_node))
         self.get_logger().info(str(end_node))
-        path = list(MapSolver.astar(MapSolver(),start_node, end_node, self.graph))
-        #micromobility_map.path_to_csv(path)
-        
+        path = list(MapSolver.astar(MapSolver(), start_node, end_node, self.graph))
+        # micromobility_map.path_to_csv(path)
+
         for n in path:
             coordinate_msg = CoordinateMsg()
             coordinate_msg.longitude = float(n.decimalcoordinate.latitude)
@@ -51,6 +52,7 @@ class PathfindingService(Node):
         self.get_logger().info(f"returned path from {start_node.id} to {end_node.id}")
         return response
 
+
 def main(args=None):
     rclpy.init(args=args)
 
@@ -59,6 +61,7 @@ def main(args=None):
     rclpy.spin(pathfinding_service)
 
     rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

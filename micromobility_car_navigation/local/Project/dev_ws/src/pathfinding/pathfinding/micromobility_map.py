@@ -3,7 +3,7 @@ import math
 import sys
 
 
-#Graph class used to represent map
+# Graph class used to represent map
 class Graph:
     def __init__(self):
         self.nodes = []
@@ -44,14 +44,13 @@ class DecimalCoordinate:
         self.latitude = latitude
 
 
-#Node class (used as node in Graph class)
+# Node class (used as node in Graph class)
 class Node:
     def __init__(self, decimalcoordinate, label, id):
         self.neighbours = []
         self.id = id
         self.decimalcoordinate = decimalcoordinate
         self.label = label
-
 
     def get_neighbours(self):
         return self.neighbours
@@ -65,22 +64,25 @@ class Node:
             print(f"    -> {neighbour.label} //")
 
     def __str__(self):
-        return f"Latitude: {self.decimalcoordinate.latitude} \t Longtitude: {self.decimalcoordinate.longtitude} Label: {self.label} N: {len(self.neighbours)} ID: {self.id}"
+        return f"Latitude: {self.decimalcoordinate.latitude} \t Longitude: {self.decimalcoordinate.longtitude} Label: {self.label} N: {len(self.neighbours)} ID: {self.id}"
 
 
 graph_object_file = "/home/user/Projects/data/graph_object.pkl"
 
-#function to serialize graph
+
+# function to serialize graph
 def read_graph(object_filename=graph_object_file):
     with open(object_filename, 'rb') as graph_object_file:
         graph = pickle.load(graph_object_file)
         return graph
 
-#function to read serialized graph
+
+# function to read serialized graph
 def save_graph(graph, object_filename=graph_object_file):
     print("serializing...")
     with open(object_filename, 'wb') as graph_object_file:
         pickle.dump(graph, graph_object_file)
+
 
 def path_to_csv(path):
     open("../data/path.csv", 'w').close()

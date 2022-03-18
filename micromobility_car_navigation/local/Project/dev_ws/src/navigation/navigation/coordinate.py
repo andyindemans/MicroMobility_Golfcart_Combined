@@ -5,5 +5,4 @@ class Coordinate:
         self.longitude = longitude
 
     def __str__(self):
-     return f"({self.latitude}, {self.longitude})"
-        
+        return f"({self.latitude}, {self.longitude})"
