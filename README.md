@@ -27,6 +27,8 @@ cd dashboard/nodejs
 node server.js
 ````
 
+Open index.html
+
 ## 5) Bridge container starten
 ````
 cd micromibility_bridgecontainer
