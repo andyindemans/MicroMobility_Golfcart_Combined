@@ -57,7 +57,7 @@ class HeadingCalculator(Node):
         heading_msg.data = heading
         self.show_compas(heading)
         self.publisher.publish(heading_msg)
-        self.get_logger().info(f"Heading: {heading}")
+        #self.get_logger().info(f"Heading: {heading}")
 
     def calculate_heading(self, lat1, lat2, long1, long2, cart_bearing):
         lat1 = math.radians(lat1)

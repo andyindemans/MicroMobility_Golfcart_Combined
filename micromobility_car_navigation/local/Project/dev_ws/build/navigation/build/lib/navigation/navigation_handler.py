@@ -17,10 +17,10 @@ import os
 class NavigationHandler(Node):
     def __init__(self):
         super().__init__('navigation_handler')
-        #self.start_lat = 50.9522165216667
-        #self.start_long = 5.35655798333333
-        self.start_lat = None
-        self.start_long = None
+        self.start_lat = 50.9522165216667
+        self.start_long = 5.35655798333333
+        #self.start_lat = None
+        #self.start_long = None
         self.current_location_subscription = self.create_subscription(CoordinateMsg, 'current_location', self.current_location_callback, 10)
         self.current_location_subscription  #prevent unused variable warning 
         self.destination_subscription = self.create_subscription(Int64, 'destination_id', self.destination_id_callback, 10)

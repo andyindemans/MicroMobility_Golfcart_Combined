@@ -17,7 +17,7 @@ class MinimalPublisher(Node):
         msg = Int64()
         msg.data = random.randint(-20, 20)
         self.publisher_.publish(msg)
-        self.get_logger().info(f"published: {msg.data}")
+        #self.get_logger().info(f"published: {msg.data}")
 
 
 

@@ -44,11 +44,12 @@ def main(args=None):
     gps_publisher = GPSPublisher()
     
     try:
-        socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-        socket.connect((addr,port))
+        #socket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
+        #socket.connect((addr,port))
         
         while(True):
-            msg = socket.recv(128)
+            msg = ['$GPGGA', '124257.60', '5057.1939338', 'N', '00521.208213', 'E', '2', '18', '0.8', '29.1245', 'M', '47.4541', 'M', '0.6', '0069*7D\n$GPVTG', '90.42', 'T', '92.90', 'M', '1.70', 'N', '3.15', 'K', 'D']
+            #msg = socket.recv(128)
             gga = msg.decode('UTF8').replace('\r', '')
             gga = gga.split(",")
 

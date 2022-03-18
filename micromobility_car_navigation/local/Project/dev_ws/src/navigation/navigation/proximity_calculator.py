@@ -18,7 +18,7 @@ class Proximity_calculator(Node):
   
     def resolve(self, msg):
         distance_to = Float64()
-        distance_to.data  = self.get_haversine_distance(msg.current_position, msg.next_position)
+        distance_to.data = self.get_haversine_distance(msg.current_position, msg.next_position)
         self.publisher.publish(distance_to)
     
     def get_haversine_distance(self, coordinate1, coordinate2):
