@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pilot_node = pilot.pilot_node:main'
+            'pilot_node = pilot.pilot_node:main',
+            'pilot_node_without_oa = pilot.pilot_node_without_oa:main'
         ],
     },
 )

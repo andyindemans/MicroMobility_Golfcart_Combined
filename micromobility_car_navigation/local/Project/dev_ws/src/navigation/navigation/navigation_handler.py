@@ -13,15 +13,32 @@ from .coordinate import Coordinate
 import pickle
 import math
 import os
+import logging
+from logging.handlers import RotatingFileHandler
 
+logger = logging.getLogger(__name__)
 
 class NavigationHandler(Node):
     def __init__(self):
         super().__init__('navigation_handler')
-        self.start_lat = 50.9522165216667
-        self.start_long = 5.35655798333333
-        # self.start_lat = None
-        # self.start_long = None
+
+        log_file = "../output/logs/" + "navigation.log"
+
+        log_format = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+        rotating_file_handler = RotatingFileHandler(log_file, mode="w", maxBytes=1000000 * 10, backupCount=7)
+        rotating_file_handler.setFormatter(log_format)
+        rotating_file_handler.setLevel(logging.DEBUG)  # Levels: DEBUG < INFO < WARNING < ERROR
+
+        root_logger = logging.getLogger("")
+        root_logger.setLevel(logging.DEBUG)
+        root_logger.addHandler(rotating_file_handler)
+
+        logger.info("\nNEW RUN IN PROGRESS")
+
+        # self.start_lat = 50.9522165216667
+        # self.start_long = 5.35655798333333
+        self.start_lat = None
+        self.start_long = None
         self.current_location_subscription = self.create_subscription(CoordinateMsg, 'current_location',
                                                                       self.current_location_callback, 10)
         self.current_location_subscription  # prevent unused variable warning
@@ -47,13 +64,16 @@ class NavigationHandler(Node):
         self.path = None
         self.path_ids = []
         self.destination_id = None
-        self.get_logger().info("navigation handler running!")
+        logger.debug("Navigation Handler running")
+        #self.get_logger().info("navigation handler running!")
 
     def destination_id_callback(self, msg):
         self.destination_id = msg.data
+        logger.debug(f'Recieved destination ID: {msg.data} from dashboard')
         # self.get_logger().info(f'Recieved destination ID: {msg.data} from dashboard')
 
     def distance_to_node_callback(self, msg):
+        logger.debug(str(msg.data))
         # self.get_logger().info(str(msg.data))
         if len(self.path) != 0:
             if msg.data < self.proximity:
@@ -63,6 +83,7 @@ class NavigationHandler(Node):
             print("End node reached!")
 
     def current_location_callback(self, msg):
+        # logger.debug(f"current location: {msg.latitude}, {msg.longitude}")
         # self.get_logger().info(f"current location: {msg.latitude}, {msg.longitude}")
         if self.start_lat == None or self.start_long == None:
             self.start_lat = msg.latitude
@@ -77,7 +98,8 @@ class NavigationHandler(Node):
             self.publisher.publish(proximity_msg)
 
     def send_request(self):
-        self.get_logger().info(f"Destination ID is set to {self.destination_id}")
+        logger.info(f"Destination ID is set to {self.destination_id}")
+        #self.get_logger().info(f"Destination ID is set to {self.destination_id}")
         self.pathfinding_request.current_lat = self.start_lat
         self.pathfinding_request.current_long = self.start_long
         # self.pathfinding_request.end_node_id = int(os.environ['END_NODE_ID'])  #will be replaced by user input
@@ -87,7 +109,8 @@ class NavigationHandler(Node):
         wait = self.client.call_async(self.pathfinding_request)
         rclpy.spin_until_future_complete(self, wait)
         if wait.result() is not None:
-            self.get_logger().info(f"Received path from pathfinding_service")
+            logger.debug(f"Received path from pathfinding_service")
+            #self.get_logger().info(f"Received path from pathfinding_service")
             self.path = []
             path = []
             path = wait.result().path
@@ -99,7 +122,8 @@ class NavigationHandler(Node):
             path_msg = Int64MultiArray()
             path_msg.data = self.path_ids
             self.path_publisher.publish(path_msg)
-            self.get_logger().info("published path ids")
+            logger.debug("published path ids")
+            #self.get_logger().info("published path ids")
         else:
             self.get_logger().info("Request failed")
 
