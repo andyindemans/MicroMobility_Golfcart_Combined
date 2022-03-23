@@ -48,7 +48,7 @@ class HeadingCalculator(Node):
                   (int)(point1[1] + length * math.sin(angle * math.pi / 180.0)))
         cv2.line(copy_canvas, point1, point2, (0, 0, 255), 5)
         cv2.imshow('compas', copy_canvas)
-        cv2.waitKey(0)
+        cv2.waitKey(100)
 
     def calculate_heading_callback(self, msg):
         heading = self.calculate_heading(msg.current_position.latitude, msg.next_position.latitude,

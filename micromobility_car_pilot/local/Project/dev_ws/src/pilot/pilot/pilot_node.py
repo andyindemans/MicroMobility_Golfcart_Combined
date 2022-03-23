@@ -34,8 +34,6 @@ class PilotNode(Node):
             self.get_logger().info("in next heading")
             self.car_instructions_publisher.publish(msg)
             #wordt deze callback ondertussen uitgevoerd?
-            
-            
 
     def obstacle_avoidance_busy_callback(self, msg):
         self.get_logger().info('Obstacle avoidance busy: "%s"' % msg.data)

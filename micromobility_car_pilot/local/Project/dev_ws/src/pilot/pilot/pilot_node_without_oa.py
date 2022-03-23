@@ -14,6 +14,7 @@ class PilotNodeWithoutOa(Node):
         self.subscription = self.create_subscription(Float64, 'next_heading', self.next_heading_callback, 10)
 
         self.car_instructions_publisher = self.create_publisher(CarInstructions, 'instructions', 10)
+        self.final_car_instructions_publisher = self.create_publisher(CarInstructions, 'finalCarInstruction', 10)
         self.return_to_node_publisher = self.create_publisher(Bool, 'return_to_node', 10)
 
         self.angle = float(os.environ['AVOIDANCE_DISTANCE'])
@@ -30,8 +31,12 @@ class PilotNodeWithoutOa(Node):
         msg.throttle = self.throttle
         msg.angle = self.next_heading
 
-        self.get_logger().info("in next heading")
+        #self.get_logger().info("angle: " + str(msg.angle))
+        #self.get_logger().info("throttle: " + str(msg.throttle))
+        #self.get_logger().info("in next heading")
+        self.get_logger().info("to car, angle: " + str(msg.angle) + " and throttle: " + str(msg.throttle))
         self.car_instructions_publisher.publish(msg)
+        self.final_car_instructions_publisher.publish(msg)
         # wordt deze callback ondertussen uitgevoerd?
 
 

@@ -34,11 +34,11 @@ class NavigationHandler(Node):
         root_logger.addHandler(rotating_file_handler)
 
         logger.info("\nNEW RUN IN PROGRESS")
-
-        # self.start_lat = 50.9522165216667
-        # self.start_long = 5.35655798333333
         self.start_lat = None
         self.start_long = None
+        #self.start_lat = 50.9522165216667
+        #self.start_long = 5.35655798333333
+
         self.current_location_subscription = self.create_subscription(CoordinateMsg, 'current_location',
                                                                       self.current_location_callback, 10)
         self.current_location_subscription  # prevent unused variable warning
@@ -119,6 +119,9 @@ class NavigationHandler(Node):
                 self.path.append(coordinate)
                 self.path_ids.append(int(coordinate.id))
 
+            self.path_ids.pop(0)
+            self.path_ids.pop(0)
+            self.path_ids.pop(0)
             path_msg = Int64MultiArray()
             path_msg.data = self.path_ids
             self.path_publisher.publish(path_msg)
