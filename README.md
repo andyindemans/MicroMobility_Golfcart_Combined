@@ -51,3 +51,9 @@ cd Project
 cd Project
 ./1_navigation_startup.sh
 ````
+## 8) Chose a node
+````
+cd dashboard
+```` 
+open index.html
+chose a node, write the id in the box on the bottom of the page and submit
