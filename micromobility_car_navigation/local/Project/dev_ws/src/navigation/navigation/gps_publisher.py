@@ -66,7 +66,7 @@ def main(args=None):
                     if heading != '':
                         heading = float(heading)
                     else:
-                        heading = 404.0
+                        heading = float(404.0)
                     coordinate_msg.heading = heading
                     gps_publisher.publisher.publish(coordinate_msg)
             except:

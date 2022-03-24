@@ -54,11 +54,14 @@ class HeadingCalculator(Node):
         heading = self.calculate_heading(msg.current_position.latitude, msg.next_position.latitude,
                                          msg.current_position.longitude, msg.next_position.longitude,
                                          msg.current_position.heading)
+        #self.get_logger().info(f"Current posiion: {msg.current_position.latitude} {msg.current_position.longitude}")
+        #self.get_logger().info(f"Next position: {msg.next_position.latitude} {msg.next_position.longitude}")
         heading_msg = Float64()
         heading_msg.data = heading
-        self.show_compas(heading)
-        self.publisher.publish(heading_msg)
-        # self.get_logger().info(f"Heading: {heading}")
+        if heading != '404':
+            self.show_compas(heading)
+            self.publisher.publish(heading_msg)
+        self.get_logger().info(f"Heading: {heading}")
 
     def calculate_heading(self, lat1, lat2, long1, long2, cart_bearing):
         lat1 = math.radians(lat1)
@@ -66,15 +69,17 @@ class HeadingCalculator(Node):
         delta_long = math.radians(long2 - long1)
         y = math.sin(delta_long) * math.cos(lat2)
         x = math.cos(lat1) * math.sin(lat2) - math.sin(lat1) * math.cos(lat2) * math.cos(delta_long)
-        bearing = math.atan2(y, x)
-        bearing = math.degrees(bearing)
-        bearing = ((int(bearing) + 360) % 360)
+        turn = 404
+        if cart_bearing != 404:
+            bearing = math.atan2(y, x)
+            bearing = math.degrees(bearing)
+            bearing = ((int(bearing) + 360) % 360)
 
-        turn = abs(cart_bearing - bearing)
-        if cart_bearing > bearing:
-            turn *= -1
+            turn = abs(bearing - cart_bearing)
+            # if cart_bearing > bearing:
+            #    turn *= -1
 
-        return turn
+        return float(turn)
 
 
 def main(args=None):
