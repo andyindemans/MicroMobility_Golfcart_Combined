@@ -1,0 +1,28 @@
+#!/bin/bash
+
+tmux new-session \; \
+  split-window -h -p 50 \; \
+  split-window -h -p 50 \; \
+  select-layout even-horizontal \; \
+  select-pane -t 0 \; \
+  select-pane -T Navigation \; \
+  send-keys "docker container stop micromobility_car_navigation_container micromobility_car_object_avoidance_container micromobility_car_pilot_container" Enter \; \
+  send-keys "docker container rm micromobility_car_navigation_container micromobility_car_object_avoidance_container micromobility_car_pilot_container" Enter \; \
+  send-keys "docker run -d -it --net host --privileged --env-file cart-settings.txt --env="DISPLAY" -v $HOME/.Xauthority:/root/.Xauthority -v /dev/shm:/dev/shm -v $PWD/micromobility_car_navigation/local/Project:/home/user/Projects --name micromobility_car_navigation_container micromobility_car_navigation /bin/bash" Enter \; \
+  send-keys "docker exec -it micromobility_car_navigation_container bash" Enter \; \
+  send-keys "cd ./Projects" Enter \; \
+  send-keys "clear" Enter \; \
+  select-pane -t 1 \; \
+  select-pane -T Object_Avoidance \; \
+  send-keys "sleep 1s && docker run -d -it --net host --privileged --env-file cart-settings.txt --env="DISPLAY" -v $HOME/.Xauthority:/root/.Xauthority -v /dev/shm:/dev/shm -v $PWD/micromobility_car_object_avoidance/local/Project:/home/user/Projects --name micromobility_car_object_avoidance_container micromobility_car_object_avoidance /bin/bash" Enter \; \
+  send-keys "docker exec -it micromobility_car_object_avoidance_container bash" Enter \; \
+  send-keys "cd ./Projects" Enter \; \
+  send-keys "clear" Enter \; \
+  select-pane -t 2 \; \
+  select-pane -T Pilot \; \
+  send-keys "sleep 1s && docker run -d -it --net host --env-file cart-settings.txt -v /dev/shm:/dev/shm -v $PWD/micromobility_car_pilot/local/Project:/home/user/Projects --name micromobility_car_pilot_container micromobility_car_pilot /bin/bash" Enter \; \
+  send-keys "docker exec -it micromobility_car_pilot_container bash" Enter \; \
+  send-keys "cd ./Projects" Enter \; \
+  send-keys "clear" Enter \; \
+  set -g pane-border-status bottom \; \
+  select-pane -t 0 \; \
