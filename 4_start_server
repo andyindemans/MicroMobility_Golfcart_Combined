@@ -1,0 +1,11 @@
+#!/bin/sh
+
+tmux new-session \; \
+  split-window -h -p 50 \; \
+  select-layout even-horizontal \; \
+  select-pane -t 0 \; \
+  send-keys "cd ./dashboard/nodejs && node server.js" Enter \; \
+  select-pane -t 1 \; \
+  send-keys "cd ./micromobility_bridgecontainer && docker-compose up" Enter \; \
+  
+  
