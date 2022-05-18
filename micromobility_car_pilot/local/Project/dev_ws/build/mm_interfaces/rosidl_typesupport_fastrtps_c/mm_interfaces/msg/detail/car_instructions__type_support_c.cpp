@@ -73,6 +73,30 @@ static bool _CarInstructions__cdr_serialize(
     cdr.serializeArray(array_ptr, size);
   }
 
+  // Field name: angle
+  {
+    cdr << ros_message->angle;
+  }
+
+  // Field name: angle_range
+  {
+    size_t size = 2;
+    auto array_ptr = ros_message->angle_range;
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: distance
+  {
+    cdr << ros_message->distance;
+  }
+
+  // Field name: distance_range
+  {
+    size_t size = 2;
+    auto array_ptr = ros_message->distance_range;
+    cdr.serializeArray(array_ptr, size);
+  }
+
   return true;
 }
 
@@ -106,6 +130,30 @@ static bool _CarInstructions__cdr_deserialize(
   {
     size_t size = 2;
     auto array_ptr = ros_message->throttle_range;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: angle
+  {
+    cdr >> ros_message->angle;
+  }
+
+  // Field name: angle_range
+  {
+    size_t size = 2;
+    auto array_ptr = ros_message->angle_range;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: distance
+  {
+    cdr >> ros_message->distance;
+  }
+
+  // Field name: distance_range
+  {
+    size_t size = 2;
+    auto array_ptr = ros_message->distance_range;
     cdr.deserializeArray(array_ptr, size);
   }
 
@@ -151,6 +199,36 @@ size_t get_serialized_size_mm_interfaces__msg__CarInstructions(
   {
     size_t array_size = 2;
     auto array_ptr = ros_message->throttle_range;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name angle
+  {
+    size_t item_size = sizeof(ros_message->angle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name angle_range
+  {
+    size_t array_size = 2;
+    auto array_ptr = ros_message->angle_range;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name distance
+  {
+    size_t item_size = sizeof(ros_message->distance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name distance_range
+  {
+    size_t array_size = 2;
+    auto array_ptr = ros_message->distance_range;
     (void)array_ptr;
     size_t item_size = sizeof(array_ptr[0]);
     current_alignment += array_size * item_size +
@@ -202,6 +280,34 @@ size_t max_serialized_size_mm_interfaces__msg__CarInstructions(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: throttle_range
+  {
+    size_t array_size = 2;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: angle
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: angle_range
+  {
+    size_t array_size = 2;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: distance
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: distance_range
   {
     size_t array_size = 2;
 

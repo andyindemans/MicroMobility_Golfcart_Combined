@@ -24,6 +24,10 @@ typedef struct mm_interfaces__msg__CarInstructions
   float steering_range[2];
   int32_t throttle;
   int32_t throttle_range[2];
+  float angle;
+  float angle_range[2];
+  float distance;
+  float distance_range[2];
 } mm_interfaces__msg__CarInstructions;
 
 // Struct for a sequence of mm_interfaces__msg__CarInstructions.

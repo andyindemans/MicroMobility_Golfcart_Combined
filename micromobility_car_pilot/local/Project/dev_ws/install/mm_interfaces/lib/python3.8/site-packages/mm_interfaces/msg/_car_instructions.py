@@ -7,6 +7,8 @@
 
 # Member 'steering_range'
 # Member 'throttle_range'
+# Member 'angle_range'
+# Member 'distance_range'
 import numpy  # noqa: E402, I100
 
 import rosidl_parser.definition  # noqa: E402, I100
@@ -52,6 +54,8 @@ class Metaclass_CarInstructions(type):
         return {
             'STEERING_RANGE__DEFAULT': numpy.array((0.0, 360.0, ), dtype=numpy.float32),
             'THROTTLE_RANGE__DEFAULT': numpy.array((0, 100, ), dtype=numpy.int32),
+            'ANGLE_RANGE__DEFAULT': numpy.array((0.0, 900.0, ), dtype=numpy.float32),
+            'DISTANCE_RANGE__DEFAULT': numpy.array((0.0, 900.0, ), dtype=numpy.float32),
         }
 
     @property
@@ -64,6 +68,16 @@ class Metaclass_CarInstructions(type):
         """Return default value for message field 'throttle_range'."""
         return numpy.array((0, 100, ), dtype=numpy.int32)
 
+    @property
+    def ANGLE_RANGE__DEFAULT(cls):
+        """Return default value for message field 'angle_range'."""
+        return numpy.array((0.0, 900.0, ), dtype=numpy.float32)
+
+    @property
+    def DISTANCE_RANGE__DEFAULT(cls):
+        """Return default value for message field 'distance_range'."""
+        return numpy.array((0.0, 900.0, ), dtype=numpy.float32)
+
 
 class CarInstructions(metaclass=Metaclass_CarInstructions):
     """Message class 'CarInstructions'."""
@@ -73,6 +87,10 @@ class CarInstructions(metaclass=Metaclass_CarInstructions):
         '_steering_range',
         '_throttle',
         '_throttle_range',
+        '_angle',
+        '_angle_range',
+        '_distance',
+        '_distance_range',
     ]
 
     _fields_and_field_types = {
@@ -80,6 +98,10 @@ class CarInstructions(metaclass=Metaclass_CarInstructions):
         'steering_range': 'float[2]',
         'throttle': 'int32',
         'throttle_range': 'int32[2]',
+        'angle': 'float',
+        'angle_range': 'float[2]',
+        'distance': 'float',
+        'distance_range': 'float[2]',
     }
 
     SLOT_TYPES = (
@@ -87,6 +109,10 @@ class CarInstructions(metaclass=Metaclass_CarInstructions):
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('int32'), 2),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
+        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('float'), 2),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -99,6 +125,12 @@ class CarInstructions(metaclass=Metaclass_CarInstructions):
         self.throttle = kwargs.get('throttle', int())
         self.throttle_range = kwargs.get(
             'throttle_range', CarInstructions.THROTTLE_RANGE__DEFAULT)
+        self.angle = kwargs.get('angle', float())
+        self.angle_range = kwargs.get(
+            'angle_range', CarInstructions.ANGLE_RANGE__DEFAULT)
+        self.distance = kwargs.get('distance', float())
+        self.distance_range = kwargs.get(
+            'distance_range', CarInstructions.DISTANCE_RANGE__DEFAULT)
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -136,6 +168,14 @@ class CarInstructions(metaclass=Metaclass_CarInstructions):
         if self.throttle != other.throttle:
             return False
         if all(self.throttle_range != other.throttle_range):
+            return False
+        if self.angle != other.angle:
+            return False
+        if all(self.angle_range != other.angle_range):
+            return False
+        if self.distance != other.distance:
+            return False
+        if all(self.distance_range != other.distance_range):
             return False
         return True
 
@@ -233,3 +273,91 @@ class CarInstructions(metaclass=Metaclass_CarInstructions):
                  all(val >= -2147483648 and val < 2147483648 for val in value)), \
                 "The 'throttle_range' field must be a set or sequence with length 2 and each value of type 'int' and each integer in [-2147483648, 2147483647]"
         self._throttle_range = numpy.array(value, dtype=numpy.int32)
+
+    @property
+    def angle(self):
+        """Message field 'angle'."""
+        return self._angle
+
+    @angle.setter
+    def angle(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'angle' field must be of type 'float'"
+        self._angle = value
+
+    @property
+    def angle_range(self):
+        """Message field 'angle_range'."""
+        return self._angle_range
+
+    @angle_range.setter
+    def angle_range(self, value):
+        if isinstance(value, numpy.ndarray):
+            assert value.dtype == numpy.float32, \
+                "The 'angle_range' numpy.ndarray() must have the dtype of 'numpy.float32'"
+            assert value.size == 2, \
+                "The 'angle_range' numpy.ndarray() must have a size of 2"
+            self._angle_range = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 2 and
+                 all(isinstance(v, float) for v in value) and
+                 True), \
+                "The 'angle_range' field must be a set or sequence with length 2 and each value of type 'float'"
+        self._angle_range = numpy.array(value, dtype=numpy.float32)
+
+    @property
+    def distance(self):
+        """Message field 'distance'."""
+        return self._distance
+
+    @distance.setter
+    def distance(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'distance' field must be of type 'float'"
+        self._distance = value
+
+    @property
+    def distance_range(self):
+        """Message field 'distance_range'."""
+        return self._distance_range
+
+    @distance_range.setter
+    def distance_range(self, value):
+        if isinstance(value, numpy.ndarray):
+            assert value.dtype == numpy.float32, \
+                "The 'distance_range' numpy.ndarray() must have the dtype of 'numpy.float32'"
+            assert value.size == 2, \
+                "The 'distance_range' numpy.ndarray() must have a size of 2"
+            self._distance_range = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 len(value) == 2 and
+                 all(isinstance(v, float) for v in value) and
+                 True), \
+                "The 'distance_range' field must be a set or sequence with length 2 and each value of type 'float'"
+        self._distance_range = numpy.array(value, dtype=numpy.float32)

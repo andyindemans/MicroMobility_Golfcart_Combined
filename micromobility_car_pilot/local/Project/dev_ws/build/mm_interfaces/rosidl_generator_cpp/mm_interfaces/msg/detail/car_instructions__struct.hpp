@@ -41,23 +41,35 @@ struct CarInstructions_
       this->steering_range[1] = 360.0f;
       this->throttle_range[0] = 0l;
       this->throttle_range[1] = 100l;
+      this->angle_range[0] = 0.0f;
+      this->angle_range[1] = 900.0f;
+      this->distance_range[0] = 0.0f;
+      this->distance_range[1] = 900.0f;
     } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->steering = 0.0f;
       std::fill<typename std::array<float, 2>::iterator, float>(this->steering_range.begin(), this->steering_range.end(), 0.0f);
       this->throttle = 0l;
       std::fill<typename std::array<int32_t, 2>::iterator, int32_t>(this->throttle_range.begin(), this->throttle_range.end(), 0l);
+      this->angle = 0.0f;
+      std::fill<typename std::array<float, 2>::iterator, float>(this->angle_range.begin(), this->angle_range.end(), 0.0f);
+      this->distance = 0.0f;
+      std::fill<typename std::array<float, 2>::iterator, float>(this->distance_range.begin(), this->distance_range.end(), 0.0f);
     }
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->steering = 0.0f;
       this->throttle = 0l;
+      this->angle = 0.0f;
+      this->distance = 0.0f;
     }
   }
 
   explicit CarInstructions_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : steering_range(_alloc),
-    throttle_range(_alloc)
+    throttle_range(_alloc),
+    angle_range(_alloc),
+    distance_range(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::DEFAULTS_ONLY == _init)
@@ -66,17 +78,27 @@ struct CarInstructions_
       this->steering_range[1] = 360.0f;
       this->throttle_range[0] = 0l;
       this->throttle_range[1] = 100l;
+      this->angle_range[0] = 0.0f;
+      this->angle_range[1] = 900.0f;
+      this->distance_range[0] = 0.0f;
+      this->distance_range[1] = 900.0f;
     } else if (rosidl_runtime_cpp::MessageInitialization::ZERO == _init) {
       this->steering = 0.0f;
       std::fill<typename std::array<float, 2>::iterator, float>(this->steering_range.begin(), this->steering_range.end(), 0.0f);
       this->throttle = 0l;
       std::fill<typename std::array<int32_t, 2>::iterator, int32_t>(this->throttle_range.begin(), this->throttle_range.end(), 0l);
+      this->angle = 0.0f;
+      std::fill<typename std::array<float, 2>::iterator, float>(this->angle_range.begin(), this->angle_range.end(), 0.0f);
+      this->distance = 0.0f;
+      std::fill<typename std::array<float, 2>::iterator, float>(this->distance_range.begin(), this->distance_range.end(), 0.0f);
     }
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->steering = 0.0f;
       this->throttle = 0l;
+      this->angle = 0.0f;
+      this->distance = 0.0f;
     }
   }
 
@@ -93,6 +115,18 @@ struct CarInstructions_
   using _throttle_range_type =
     std::array<int32_t, 2>;
   _throttle_range_type throttle_range;
+  using _angle_type =
+    float;
+  _angle_type angle;
+  using _angle_range_type =
+    std::array<float, 2>;
+  _angle_range_type angle_range;
+  using _distance_type =
+    float;
+  _distance_type distance;
+  using _distance_range_type =
+    std::array<float, 2>;
+  _distance_range_type distance_range;
 
   // setters for named parameter idiom
   Type & set__steering(
@@ -117,6 +151,30 @@ struct CarInstructions_
     const std::array<int32_t, 2> & _arg)
   {
     this->throttle_range = _arg;
+    return *this;
+  }
+  Type & set__angle(
+    const float & _arg)
+  {
+    this->angle = _arg;
+    return *this;
+  }
+  Type & set__angle_range(
+    const std::array<float, 2> & _arg)
+  {
+    this->angle_range = _arg;
+    return *this;
+  }
+  Type & set__distance(
+    const float & _arg)
+  {
+    this->distance = _arg;
+    return *this;
+  }
+  Type & set__distance_range(
+    const std::array<float, 2> & _arg)
+  {
+    this->distance_range = _arg;
     return *this;
   }
 
@@ -172,6 +230,18 @@ struct CarInstructions_
       return false;
     }
     if (this->throttle_range != other.throttle_range) {
+      return false;
+    }
+    if (this->angle != other.angle) {
+      return false;
+    }
+    if (this->angle_range != other.angle_range) {
+      return false;
+    }
+    if (this->distance != other.distance) {
+      return false;
+    }
+    if (this->distance_range != other.distance_range) {
       return false;
     }
     return true;

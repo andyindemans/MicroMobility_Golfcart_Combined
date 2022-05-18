@@ -20,16 +20,80 @@ namespace msg
 namespace builder
 {
 
+class Init_CarInstructions_distance_range
+{
+public:
+  explicit Init_CarInstructions_distance_range(::mm_interfaces::msg::CarInstructions & msg)
+  : msg_(msg)
+  {}
+  ::mm_interfaces::msg::CarInstructions distance_range(::mm_interfaces::msg::CarInstructions::_distance_range_type arg)
+  {
+    msg_.distance_range = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::mm_interfaces::msg::CarInstructions msg_;
+};
+
+class Init_CarInstructions_distance
+{
+public:
+  explicit Init_CarInstructions_distance(::mm_interfaces::msg::CarInstructions & msg)
+  : msg_(msg)
+  {}
+  Init_CarInstructions_distance_range distance(::mm_interfaces::msg::CarInstructions::_distance_type arg)
+  {
+    msg_.distance = std::move(arg);
+    return Init_CarInstructions_distance_range(msg_);
+  }
+
+private:
+  ::mm_interfaces::msg::CarInstructions msg_;
+};
+
+class Init_CarInstructions_angle_range
+{
+public:
+  explicit Init_CarInstructions_angle_range(::mm_interfaces::msg::CarInstructions & msg)
+  : msg_(msg)
+  {}
+  Init_CarInstructions_distance angle_range(::mm_interfaces::msg::CarInstructions::_angle_range_type arg)
+  {
+    msg_.angle_range = std::move(arg);
+    return Init_CarInstructions_distance(msg_);
+  }
+
+private:
+  ::mm_interfaces::msg::CarInstructions msg_;
+};
+
+class Init_CarInstructions_angle
+{
+public:
+  explicit Init_CarInstructions_angle(::mm_interfaces::msg::CarInstructions & msg)
+  : msg_(msg)
+  {}
+  Init_CarInstructions_angle_range angle(::mm_interfaces::msg::CarInstructions::_angle_type arg)
+  {
+    msg_.angle = std::move(arg);
+    return Init_CarInstructions_angle_range(msg_);
+  }
+
+private:
+  ::mm_interfaces::msg::CarInstructions msg_;
+};
+
 class Init_CarInstructions_throttle_range
 {
 public:
   explicit Init_CarInstructions_throttle_range(::mm_interfaces::msg::CarInstructions & msg)
   : msg_(msg)
   {}
-  ::mm_interfaces::msg::CarInstructions throttle_range(::mm_interfaces::msg::CarInstructions::_throttle_range_type arg)
+  Init_CarInstructions_angle throttle_range(::mm_interfaces::msg::CarInstructions::_throttle_range_type arg)
   {
     msg_.throttle_range = std::move(arg);
-    return std::move(msg_);
+    return Init_CarInstructions_angle(msg_);
   }
 
 private:

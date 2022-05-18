@@ -23,6 +23,14 @@ mm_interfaces__msg__CarInstructions__init(mm_interfaces__msg__CarInstructions * 
   // throttle_range
   msg->throttle_range[0] = 0l;
   msg->throttle_range[1] = 100l;
+  // angle
+  // angle_range
+  msg->angle_range[0] = 0.0f;
+  msg->angle_range[1] = 900.0f;
+  // distance
+  // distance_range
+  msg->distance_range[0] = 0.0f;
+  msg->distance_range[1] = 900.0f;
   return true;
 }
 
@@ -36,6 +44,10 @@ mm_interfaces__msg__CarInstructions__fini(mm_interfaces__msg__CarInstructions * 
   // steering_range
   // throttle
   // throttle_range
+  // angle
+  // angle_range
+  // distance
+  // distance_range
 }
 
 mm_interfaces__msg__CarInstructions *

@@ -76,8 +76,9 @@ class HeadingCalculator(Node):
             bearing = ((int(bearing) + 360) % 360)
 
             turn = abs(bearing - cart_bearing)
-            # if cart_bearing > bearing:
-            #    turn *= -1
+            #turn = abs(bearing - cart_bearing)
+            if cart_bearing > bearing:
+                turn *= -1
 
         return float(turn)
 

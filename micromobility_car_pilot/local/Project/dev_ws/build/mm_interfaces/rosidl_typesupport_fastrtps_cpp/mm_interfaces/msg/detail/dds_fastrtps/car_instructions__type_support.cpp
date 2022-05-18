@@ -44,6 +44,18 @@ cdr_serialize(
   {
     cdr << ros_message.throttle_range;
   }
+  // Member: angle
+  cdr << ros_message.angle;
+  // Member: angle_range
+  {
+    cdr << ros_message.angle_range;
+  }
+  // Member: distance
+  cdr << ros_message.distance;
+  // Member: distance_range
+  {
+    cdr << ros_message.distance_range;
+  }
   return true;
 }
 
@@ -67,6 +79,22 @@ cdr_deserialize(
   // Member: throttle_range
   {
     cdr >> ros_message.throttle_range;
+  }
+
+  // Member: angle
+  cdr >> ros_message.angle;
+
+  // Member: angle_range
+  {
+    cdr >> ros_message.angle_range;
+  }
+
+  // Member: distance
+  cdr >> ros_message.distance;
+
+  // Member: distance_range
+  {
+    cdr >> ros_message.distance_range;
   }
 
   return true;
@@ -108,6 +136,32 @@ get_serialized_size(
   {
     size_t array_size = 2;
     size_t item_size = sizeof(ros_message.throttle_range[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: angle
+  {
+    size_t item_size = sizeof(ros_message.angle);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: angle_range
+  {
+    size_t array_size = 2;
+    size_t item_size = sizeof(ros_message.angle_range[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: distance
+  {
+    size_t item_size = sizeof(ros_message.distance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: distance_range
+  {
+    size_t array_size = 2;
+    size_t item_size = sizeof(ros_message.distance_range[0]);
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -155,6 +209,38 @@ max_serialized_size_CarInstructions(
   }
 
   // Member: throttle_range
+  {
+    size_t array_size = 2;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: angle
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: angle_range
+  {
+    size_t array_size = 2;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: distance
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: distance_range
   {
     size_t array_size = 2;
 

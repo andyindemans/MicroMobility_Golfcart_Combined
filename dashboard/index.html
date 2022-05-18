@@ -115,12 +115,11 @@
         //window.localStorage.setItem("map", JSON.stringify(this.responseText));
         //console.log(window.localStorage.getItem("map"))
         
-        mapJson[1106]["icon"] = "car"
+        mapJson[1000]["icon"] = "car"
         for (var i = 0; i < Object.keys(mapJson).length; i++){
           mapJson[i]["tooltip"] = i;
         }
         new Mapkick.Map("map", mapJson, {zoom: 16.2, defaultIcon:"circle"});
-        
         path = JSON.parse(window.localStorage.getItem("path") || "[]")
         
         for (var i = 0; i < Object.keys(mapJson).length; i++){

@@ -119,6 +119,72 @@ bool mm_interfaces__msg__car_instructions__convert_from_py(PyObject * _pymsg, vo
     }
     Py_DECREF(field);
   }
+  {  // angle
+    PyObject * field = PyObject_GetAttrString(_pymsg, "angle");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->angle = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // angle_range
+    PyObject * field = PyObject_GetAttrString(_pymsg, "angle_range");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+      Py_ssize_t size = 2;
+      float * dest = ros_message->angle_range;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(float));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
+  {  // distance
+    PyObject * field = PyObject_GetAttrString(_pymsg, "distance");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->distance = (float)PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // distance_range
+    PyObject * field = PyObject_GetAttrString(_pymsg, "distance_range");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+      Py_ssize_t size = 2;
+      float * dest = ros_message->distance_range;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        float tmp = *(npy_float32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(float));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -197,6 +263,64 @@ PyObject * mm_interfaces__msg__car_instructions__convert_to_py(void * raw_ros_me
     npy_int32 * dst = (npy_int32 *)PyArray_GETPTR1(seq_field, 0);
     int32_t * src = &(ros_message->throttle_range[0]);
     memcpy(dst, src, 2 * sizeof(int32_t));
+    Py_DECREF(field);
+  }
+  {  // angle
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->angle);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "angle", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // angle_range
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "angle_range");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+    assert(sizeof(npy_float32) == sizeof(float));
+    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
+    float * src = &(ros_message->angle_range[0]);
+    memcpy(dst, src, 2 * sizeof(float));
+    Py_DECREF(field);
+  }
+  {  // distance
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->distance);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "distance", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // distance_range
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "distance_range");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_FLOAT32);
+    assert(sizeof(npy_float32) == sizeof(float));
+    npy_float32 * dst = (npy_float32 *)PyArray_GETPTR1(seq_field, 0);
+    float * src = &(ros_message->distance_range[0]);
+    memcpy(dst, src, 2 * sizeof(float));
     Py_DECREF(field);
   }
 

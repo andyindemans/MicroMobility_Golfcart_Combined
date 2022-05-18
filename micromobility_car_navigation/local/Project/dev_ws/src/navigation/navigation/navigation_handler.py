@@ -25,7 +25,7 @@ class NavigationHandler(Node):
         log_file = "../output/logs/" + "navigation.log"
 
         log_format = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-        rotating_file_handler = RotatingFileHandler(log_file, mode="w", maxBytes=1000000 * 10, backupCount=7)
+        rotating_file_handler = RotatingFileHandler(log_file, mode="w", maxBytes=10000 * 10, backupCount=7)
         rotating_file_handler.setFormatter(log_format)
         rotating_file_handler.setLevel(logging.DEBUG)  # Levels: DEBUG < INFO < WARNING < ERROR
 
@@ -73,7 +73,7 @@ class NavigationHandler(Node):
         # self.get_logger().info(f'Recieved destination ID: {msg.data} from dashboard')
 
     def distance_to_node_callback(self, msg):
-        logger.debug(str(msg.data))
+        #logger.debug(str(msg.data))
         # self.get_logger().info(str(msg.data))
         if len(self.path) != 0:
             if msg.data < self.proximity:
@@ -113,15 +113,23 @@ class NavigationHandler(Node):
             #self.get_logger().info(f"Received path from pathfinding_service")
             self.path = []
             path = []
+            outputpath = ""
             path = wait.result().path
             for node in path:
                 coordinate = Coordinate(node.id, node.latitude, node.longitude)
                 self.path.append(coordinate)
                 self.path_ids.append(int(coordinate.id))
+                outputpath += str(node.id) + ", "
 
-            self.path_ids.pop(0)
-            self.path_ids.pop(0)
-            self.path_ids.pop(0)
+            for x in range(3):
+                self.path_ids.pop(0)
+                del self.path[0]
+            #for node in self.path:
+            #    logger.debug(f"Node {node.id}:")
+            #    logger.debug(f"   lat: {node.latitude},   long: {node.longitude}")
+
+            #str1 = ', '.join(self.path)
+            #logger.debug(f"Received path from: {str(outputpath)}")
             path_msg = Int64MultiArray()
             path_msg.data = self.path_ids
             self.path_publisher.publish(path_msg)

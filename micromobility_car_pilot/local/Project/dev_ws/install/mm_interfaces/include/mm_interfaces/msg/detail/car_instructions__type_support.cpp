@@ -77,7 +77,47 @@ void * get_function__CarInstructions__throttle_range(void * untyped_member, size
   return &member[index];
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember CarInstructions_message_member_array[4] = {
+size_t size_function__CarInstructions__angle_range(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 2;
+}
+
+const void * get_const_function__CarInstructions__angle_range(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<float, 2> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__CarInstructions__angle_range(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<float, 2> *>(untyped_member);
+  return &member[index];
+}
+
+size_t size_function__CarInstructions__distance_range(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 2;
+}
+
+const void * get_const_function__CarInstructions__distance_range(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<float, 2> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__CarInstructions__distance_range(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<float, 2> *>(untyped_member);
+  return &member[index];
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember CarInstructions_message_member_array[8] = {
   {
     "steering",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -137,13 +177,73 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember CarInstructio
     get_const_function__CarInstructions__throttle_range,  // get_const(index) function pointer
     get_function__CarInstructions__throttle_range,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "angle",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mm_interfaces::msg::CarInstructions, angle),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "angle_range",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    2,  // array size
+    false,  // is upper bound
+    offsetof(mm_interfaces::msg::CarInstructions, angle_range),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__CarInstructions__angle_range,  // size() function pointer
+    get_const_function__CarInstructions__angle_range,  // get_const(index) function pointer
+    get_function__CarInstructions__angle_range,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "distance",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(mm_interfaces::msg::CarInstructions, distance),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "distance_range",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    2,  // array size
+    false,  // is upper bound
+    offsetof(mm_interfaces::msg::CarInstructions, distance_range),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__CarInstructions__distance_range,  // size() function pointer
+    get_const_function__CarInstructions__distance_range,  // get_const(index) function pointer
+    get_function__CarInstructions__distance_range,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers CarInstructions_message_members = {
   "mm_interfaces::msg",  // message namespace
   "CarInstructions",  // message name
-  4,  // number of fields
+  8,  // number of fields
   sizeof(mm_interfaces::msg::CarInstructions),
   CarInstructions_message_member_array,  // message members
   CarInstructions_init_function,  // function to initialize message memory (memory has to be allocated)
