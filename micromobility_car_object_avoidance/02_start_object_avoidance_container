@@ -1,0 +1,18 @@
+#!/bin/bash
+
+docker container stop micromobility_object_avoidance_container
+
+docker container rm micromobility_object_avoidance_container
+
+docker run -d -it --rm --gpus all --net host --privileged --env-file cart-settings.txt --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" -v /dev/shm:/dev/shm -v `pwd`/./local/Projects:/home/user/Projects --name micromobility_object_avoidance_container micromobility_object_avoidance /bin/bash
+
+sleep 1s
+
+tmux new-session \; \
+  send-keys "docker exec -it micromobility_object_avoidance_container bash" Enter \; \
+  send-keys "cd Projects/ros2_ws && . install/local_setup.bash" Enter \; \
+  send-keys "colcon build" Enter \; \
+  send-keys "clear" Enter \; \
+  rename-window Object-avoidance \; \
+
+

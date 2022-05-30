@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t micromobility_car_object_avoidance .
+docker build -t micromobility_object_avoidance .
