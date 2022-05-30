@@ -46,6 +46,8 @@ class NavigationHandler(Node):
                                                                  10)
         self.next_node_reached_subscription = self.create_subscription(Float64, 'distance_to_node',
                                                                        self.distance_to_node_callback, 10)
+        self.deleteNode = self.create_subscription(Float64, 'delete_next_node',
+                                                                       self.delete_next_node, 10)
 
         self.proximity = int(os.environ['PROXIMITY'])
 
@@ -81,6 +83,10 @@ class NavigationHandler(Node):
                 del self.path[0]
         else:
             print("End node reached!")
+
+    def delete_next_node(self, msg):
+        if len(self.path) != 0:
+            del self.path[0]
 
     def current_location_callback(self, msg):
         # logger.debug(f"current location: {msg.latitude}, {msg.longitude}")
