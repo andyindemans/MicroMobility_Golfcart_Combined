@@ -59,6 +59,7 @@ class NavigationHandler(Node):
 
         self.publisher = self.create_publisher(CurrentNextLocation, 'coorpair', 10)
         self.path_publisher = self.create_publisher(Int64MultiArray, 'path', 10)
+        self.emergency_stop = self.create_publisher(String, 'emergency_stop', 10)
 
         self.delete_next_node_subscriber = self.create_subscription(Bool, 'delete_next_node',
                                                                     self.delete_next_node_callback, 10)
@@ -91,17 +92,20 @@ class NavigationHandler(Node):
     def current_location_callback(self, msg):
         # logger.debug(f"current location: {msg.latitude}, {msg.longitude}")
         # self.get_logger().info(f"current location: {msg.latitude}, {msg.longitude}")
-        if self.start_lat == None or self.start_long == None:
-            self.start_lat = msg.latitude
-            self.start_long = msg.longitude
+        try:
+            if self.start_lat == None or self.start_long == None:
+                self.start_lat = msg.latitude
+                self.start_long = msg.longitude
 
-        if self.path is not None:
-            proximity_msg = CurrentNextLocation()
-            proximity_msg.current_position = msg
-            proximity_msg.next_position.latitude = self.path[0].latitude
-            proximity_msg.next_position.longitude = self.path[0].longitude
-            # self.get_logger().info(f"distance between {msg.latitude},{msg.longitude} and {self.path[0].latitude}, {self.path[0].longitude}")
-            self.publisher.publish(proximity_msg)
+            if self.path is not None:
+                proximity_msg = CurrentNextLocation()
+                proximity_msg.current_position = msg
+                proximity_msg.next_position.latitude = self.path[0].latitude
+                proximity_msg.next_position.longitude = self.path[0].longitude
+                # self.get_logger().info(f"distance between {msg.latitude},{msg.longitude} and {self.path[0].latitude}, {self.path[0].longitude}")
+                self.publisher.publish(proximity_msg)
+        except:
+            self.emergency_stop.publish("STOP")
 
     def send_request(self):
         logger.info(f"Destination ID is set to {self.destination_id}")

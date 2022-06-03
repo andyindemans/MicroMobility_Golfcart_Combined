@@ -88,8 +88,9 @@ class Object_Detection(Node):
             font = cv2.FONT_HERSHEY_SIMPLEX
 
         self.point = closest_object
-        if (self.distance < 400 and self.distance != 0):
+        if (self.distance < 2000 and self.distance != 0):
             print("Too close! Stopping...")
+            self.emergency_stop.publish("STOP")
 
 def main():
     # ROS2 init

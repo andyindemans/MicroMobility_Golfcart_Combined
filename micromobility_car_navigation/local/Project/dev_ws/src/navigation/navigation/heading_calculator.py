@@ -60,11 +60,11 @@ class HeadingCalculator(Node):
         heading_msg = Float64()
         heading_msg.data = heading
         if heading != '404':
-            if -180 < heading < 180:
-                self.show_compas(heading)
-                self.publisher.publish(heading_msg)
-            else:
-                self.deleteNode.publish(heading_msg)
+            #if -180 < heading < 180:
+            self.show_compas(heading)
+            self.publisher.publish(heading_msg)
+            #else:
+            #    self.deleteNode.publish(heading_msg)
         self.get_logger().info(f"Heading: {heading}")
 
     def calculate_heading(self, lat1, lat2, long1, long2, cart_bearing):

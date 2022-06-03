@@ -19,6 +19,7 @@ class HeadingCalculator(Node):
                                                      10)
         self.subscription  # prevent unused variable warning
         self.publisher = self.create_publisher(Float64, 'next_heading', 10)
+        self.deleteNode = self.create_publisher(Float64, 'delete_next_node', 10)
         self.get_logger().info("heading calculator running!")
 
     def draw_compas(self):
@@ -59,8 +60,11 @@ class HeadingCalculator(Node):
         heading_msg = Float64()
         heading_msg.data = heading
         if heading != '404':
+            #if -180 < heading < 180:
             self.show_compas(heading)
             self.publisher.publish(heading_msg)
+            #else:
+            #    self.deleteNode.publish(heading_msg)
         self.get_logger().info(f"Heading: {heading}")
 
     def calculate_heading(self, lat1, lat2, long1, long2, cart_bearing):
